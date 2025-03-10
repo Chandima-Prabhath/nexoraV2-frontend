@@ -84,24 +84,24 @@ const MovieLinkFetcher: React.FC<MovieLinkFetcherProps> = ({
     }, [title]);
 
     return (
-        <div className="p-6 bg-gray-800 text-gray-200 rounded-lg shadow-md" data-oid="tsivuhz">
-            <h2 className="text-xl font-semibold mb-4" data-oid="qxrzrn9">
+        <div className="p-6 bg-gray-800 text-gray-200 rounded-lg shadow-md" data-oid="5011su8">
+            <h2 className="text-xl font-semibold mb-4" data-oid="3p5-cck">
                 Fetching Video Link
             </h2>
             {progress ? (
-                <div className="space-y-2" data-oid="dn_v.kl">
-                    <p className="text-sm" data-oid="886_itd">
+                <div className="space-y-2" data-oid="kx8fn5a">
+                    <p className="text-sm" data-oid="4ct-hy5">
                         Status: {progress.status}
                     </p>
-                    <p className="text-sm" data-oid="8scnw0z">
+                    <p className="text-sm" data-oid="ahdoazp">
                         Progress: {progress.progress.toFixed(2)}%
                     </p>
-                    <p className="text-sm" data-oid="33hytrj">
+                    <p className="text-sm" data-oid="c.tl2w0">
                         Downloaded: {progress.downloaded} / {progress.total}
                     </p>
                 </div>
             ) : (
-                <p className="text-sm" data-oid="pwhoudm">
+                <p className="text-sm" data-oid="_9tfm5y">
                     Initializing...
                 </p>
             )}
@@ -109,7 +109,7 @@ const MovieLinkFetcher: React.FC<MovieLinkFetcherProps> = ({
                 <button
                     onClick={onCancel}
                     className="mt-6 w-full py-2 bg-purple-600 hover:bg-purple-500 rounded-md text-white font-semibold transition-colors"
-                    data-oid="mlk18u2"
+                    data-oid="hhn6t3g"
                 >
                     Cancel
                 </button>

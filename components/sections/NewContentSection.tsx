@@ -23,20 +23,20 @@ export default function NewContentSection() {
     }, []);
 
     return (
-        <div className="space-y-2" data-oid="kucs35s">
-            <ScrollSection title="Discover Movies" link={'/browse/movies'} data-oid="a:yr.09">
+        <div className="space-y-2" data-oid="pt.s1ax">
+            <ScrollSection title="Discover Movies" link={'/browse/movies'} data-oid="54mwshf">
                 {movies.map((movie, index) => (
-                    <MovieCard key={index} title={movie.title} data-oid="y-miii5" />
+                    <MovieCard key={index} title={movie.title} data-oid="tqz7csi" />
                 ))}
             </ScrollSection>
 
-            <ScrollSection title="Discover TV Shows" link={'/browse/tvshows'} data-oid="s1gghk0">
+            <ScrollSection title="Discover TV Shows" link={'/browse/tvshows'} data-oid="rxzb:0v">
                 {tvshows.map((tvshow, index) => (
                     <TvShowCard
                         key={index}
                         title={tvshow.title}
                         episodesCount={null}
-                        data-oid=":rtfc:y"
+                        data-oid="ui:cxo5"
                     />
                 ))}
             </ScrollSection>

@@ -107,18 +107,18 @@ export default function GenresFilter({ mediaType, onFilterChange }: GenreCompPro
     };
 
     return (
-        <div data-oid="bh_3db8">
-            <div className="flex flex-wrap gap-2" data-oid=":20.m46">
+        <div data-oid="9.ae7rc">
+            <div className="flex flex-wrap gap-2" data-oid="2h3f8_p">
                 <button
                     className={`${
                         isSelected('All') ? 'bg-gray-500' : 'hover:bg-gray-700 bg-gray-800'
                     } p-1 rounded-xl transition-all duration-300 ease-in-out flex text-center items-center`}
                     disabled={spinnerLoading}
                     onClick={handleFilter}
-                    data-oid="qvppjd9"
+                    data-oid="k3h4ib7"
                 >
-                    <FunnelIcon className="size-5" data-oid="-xnjtua" />
-                    <p className="text-sm" data-oid="e4ppih1">
+                    <FunnelIcon className="size-5" data-oid="5izlqul" />
+                    <p className="text-sm" data-oid="tz9ei9w">
                         Filter
                     </p>
                 </button>
@@ -131,7 +131,7 @@ export default function GenresFilter({ mediaType, onFilterChange }: GenreCompPro
                             ? 'bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white'
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     }`}
-                    data-oid=":pt6to4"
+                    data-oid="l8y.amq"
                 >
                     All
                 </button>
@@ -146,10 +146,10 @@ export default function GenresFilter({ mediaType, onFilterChange }: GenreCompPro
                                     ? 'bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white'
                                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                             }`}
-                            data-oid="egj3f6y"
+                            data-oid="bos_d.i"
                         >
                             {genre.name}{' '}
-                            <span className="text-xs text-gray-500" data-oid="p62.n__">
+                            <span className="text-xs text-gray-500" data-oid="ipadb5x">
                                 ({genre.density})
                             </span>
                         </button>
@@ -158,35 +158,35 @@ export default function GenresFilter({ mediaType, onFilterChange }: GenreCompPro
                     <button
                         className="text-gray-500 hover:text-gray-400"
                         onClick={() => setShowAll(!showAll)}
-                        data-oid="gd5ek54"
+                        data-oid="7pi8z41"
                     >
                         {showAll ? 'Show Less' : 'Show More'}
                     </button>
                 )}
             </div>
 
-            <div className="portrait:p-2 p-4" data-oid="aky0v6j">
+            <div className="portrait:p-2 p-4" data-oid="ezs0d7i">
                 {spinnerLoading ? (
                     <></>
                 ) : (
                     <>
                         <div
                             className="flex flex-wrap justify-center items-center portrait:gap-2 gap-10"
-                            data-oid="zdvo47_"
+                            data-oid="hj6oc0c"
                         >
                             {genresItems.map((item, index) => (
                                 <div
                                     key={index}
                                     className="transform transition-transform duration-300 hover:scale-105 w-[fit-content]"
-                                    data-oid="rwf4mpd"
+                                    data-oid="s50qugo"
                                 >
                                     {mediaType === 'movie' ? (
-                                        <MovieCard title={item.title} data-oid="y4nfuoz" />
+                                        <MovieCard title={item.title} data-oid="6xbzo_k" />
                                     ) : (
                                         <TvShowCard
                                             title={item.title}
                                             episodesCount={null}
-                                            data-oid="fmkh67h"
+                                            data-oid="bfkigl7"
                                         />
                                     )}
                                 </div>
@@ -195,28 +195,28 @@ export default function GenresFilter({ mediaType, onFilterChange }: GenreCompPro
                         {genresItems.length > 0 && (
                             <div
                                 className="mt-12 flex flex-row items-center justify-center gap-2"
-                                data-oid=".itppcn"
+                                data-oid="e_y1l6j"
                             >
-                                <div className="flex items-center gap-2" data-oid="r724_1x">
+                                <div className="flex items-center gap-2" data-oid="lfx69_l">
                                     <button
                                         onClick={() => handlePageChange(1)}
                                         disabled={currentPage <= 1 || spinnerLoading}
                                         className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 transition-colors"
-                                        data-oid="sk9:p5c"
+                                        data-oid="d9t9:1a"
                                     >
                                         <svg
                                             className="w-5 h-5"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
-                                            data-oid="cg6flng"
+                                            data-oid="7vd11vy"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
-                                                data-oid="701769."
+                                                data-oid="5pv:bzq"
                                             />
                                         </svg>
                                     </button>
@@ -224,53 +224,53 @@ export default function GenresFilter({ mediaType, onFilterChange }: GenreCompPro
                                         onClick={() => handlePageChange(currentPage - 1)}
                                         disabled={currentPage <= 1 || spinnerLoading}
                                         className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 transition-colors"
-                                        data-oid="9xbongg"
+                                        data-oid="..ke9z."
                                     >
                                         <svg
                                             className="w-5 h-5"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
-                                            data-oid="a72n.rk"
+                                            data-oid="yz27-fe"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M15 19l-7-7 7-7"
-                                                data-oid="lzw6dvb"
+                                                data-oid="2k7o:fp"
                                             />
                                         </svg>
                                     </button>
                                 </div>
-                                <div className="flex items-center gap-2" data-oid="vde-8l_">
+                                <div className="flex items-center gap-2" data-oid="cy:xc5-">
                                     <span
                                         className="px-4 py-2 rounded-lg bg-gray-800 text-white font-medium"
-                                        data-oid="wlwde74"
+                                        data-oid="ao7r1-k"
                                     >
                                         Page {currentPage} of {totalPages}
                                     </span>
                                 </div>
-                                <div className="flex items-center gap-2" data-oid="z8b5gd.">
+                                <div className="flex items-center gap-2" data-oid="91:p308">
                                     <button
                                         onClick={() => handlePageChange(currentPage + 1)}
                                         disabled={currentPage >= totalPages || spinnerLoading}
                                         className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 transition-colors"
-                                        data-oid="bbi7idz"
+                                        data-oid="zfs8hcs"
                                     >
                                         <svg
                                             className="w-5 h-5"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
-                                            data-oid="pr6w0.r"
+                                            data-oid="-9enldg"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M9 5l7 7-7 7"
-                                                data-oid="b9fha0:"
+                                                data-oid="csgx5.j"
                                             />
                                         </svg>
                                     </button>
@@ -278,21 +278,21 @@ export default function GenresFilter({ mediaType, onFilterChange }: GenreCompPro
                                         onClick={() => handlePageChange(totalPages)}
                                         disabled={currentPage >= totalPages || spinnerLoading}
                                         className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 transition-colors"
-                                        data-oid="atmruy:"
+                                        data-oid="abdrcpa"
                                     >
                                         <svg
                                             className="w-5 h-5"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
-                                            data-oid=".q6sqj_"
+                                            data-oid="xvtb-6_"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                                                data-oid="i3wjxv_"
+                                                data-oid="lb9gk2t"
                                             />
                                         </svg>
                                     </button>

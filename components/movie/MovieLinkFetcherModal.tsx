@@ -92,30 +92,30 @@ const MovieLinkFetcherModal: React.FC<VideoLinkFetcherModalProps> = ({
     return (
         <div
             className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
-            data-oid="e29ktg1"
+            data-oid="kc:klsh"
         >
             <div
                 className="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-200 rounded-lg shadow-lg p-6 w-full max-w-md mx-4 relative"
-                data-oid="dz28z_s"
+                data-oid="de9.spn"
             >
-                <h2 className="text-xl font-semibold text-center mb-4" data-oid=".o9mnk9">
+                <h2 className="text-xl font-semibold text-center mb-4" data-oid="qtg46yl">
                     Fetching Video Link
                 </h2>
 
                 {progress ? (
-                    <div className="text-center space-y-2" data-oid="vf1hkdv">
-                        <p className="text-sm" data-oid="ox5ons3">
+                    <div className="text-center space-y-2" data-oid="c0-h-x5">
+                        <p className="text-sm" data-oid="ypk1mdw">
                             Status: {progress.status}
                         </p>
-                        <p className="text-sm" data-oid="fej9zav">
+                        <p className="text-sm" data-oid="..mq35x">
                             Progress: {progress.progress.toFixed(2)}%
                         </p>
-                        <p className="text-sm" data-oid="hf6zae3">
+                        <p className="text-sm" data-oid="-rp2buq">
                             Downloaded: {progress.downloaded} / {progress.total}
                         </p>
                     </div>
                 ) : (
-                    <p className="text-center text-sm" data-oid="7ay7lv5">
+                    <p className="text-center text-sm" data-oid="s7:squu">
                         Initializing...
                     </p>
                 )}
@@ -123,17 +123,17 @@ const MovieLinkFetcherModal: React.FC<VideoLinkFetcherModalProps> = ({
                 {!videoFetched && (
                     <div
                         className="mt-4 p-2 bg-gray-700 rounded text-center text-sm text-yellow-300"
-                        data-oid="9bx8sj2"
+                        data-oid="kz35k2p"
                     >
-                        <p data-oid="-d8lgoz">
+                        <p data-oid="-1712po">
                             Advertisement: Your video is caching, please wait...
                         </p>
-                        <div className="mt-2 flex justify-center" data-oid="jtg.wi6">
+                        <div className="mt-2 flex justify-center" data-oid="b09-z1r">
                             <img
                                 src="https://www.adspeed.com/placeholder-300x250.gif"
                                 alt="Ad"
                                 className="h-24 rounded"
-                                data-oid="3l01aaa"
+                                data-oid="wuze82:"
                             />
                         </div>
                     </div>
@@ -142,7 +142,7 @@ const MovieLinkFetcherModal: React.FC<VideoLinkFetcherModalProps> = ({
                 <button
                     onClick={onClose}
                     className="mt-6 w-full py-2 bg-purple-600 hover:bg-purple-500 rounded-md text-white font-semibold transition-colors"
-                    data-oid="1xkm-3p"
+                    data-oid="tj82l48"
                 >
                     Cancel
                 </button>

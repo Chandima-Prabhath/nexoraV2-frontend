@@ -23,33 +23,33 @@ export function SpinnerLoadingProvider({ children }: { children: ReactNode }) {
     const [spinnerLoading, setSpinnerLoading] = useState(false);
 
     return (
-        <LoadingContext.Provider value={{ spinnerLoading, setSpinnerLoading }} data-oid=".68hi:i">
-            <AnimatePresence mode="wait" data-oid="0jvn.hf">
+        <LoadingContext.Provider value={{ spinnerLoading, setSpinnerLoading }} data-oid="12ybe6_">
+            <AnimatePresence mode="wait" data-oid="z:73j29">
                 {spinnerLoading && (
                     <motion.div
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.6, ease: 'easeInOut' }}
                         className="fixed inset-0 z-40 flex items-center justify-center bg-gray-900/50"
-                        data-oid="xkbxmy5"
+                        data-oid="rxpjrve"
                     >
-                        <div className="relative flex flex-col items-center" data-oid="kn871a.">
+                        <div className="relative flex flex-col items-center" data-oid="d:zrvj1">
                             {/* Loading Animation */}
                             <motion.div
                                 animate={{ rotate: 360 }}
                                 transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
                                 className="relative w-16 h-16"
-                                data-oid="m989oft"
+                                data-oid="pwgaz_l"
                             >
                                 {/* Outer Ring */}
                                 <div
                                     className="absolute inset-0 border-4 border-transparent border-t-purple-500 border-l-purple-500 rounded-full"
-                                    data-oid="sijtwh9"
+                                    data-oid="myt7goz"
                                 ></div>
                                 {/* Inner Glow Effect */}
                                 <div
                                     className="absolute inset-0 w-full h-full animate-ping rounded-full bg-purple-500 opacity-30"
-                                    data-oid="x5ruuh4"
+                                    data-oid="1p_d.4y"
                                 ></div>
                             </motion.div>
                         </div>

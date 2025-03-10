@@ -73,7 +73,7 @@ const BannerImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
                 visible ? 'opacity-100' : 'opacity-0'
             }`}
-            data-oid="xtfhlho"
+            data-oid="cve29kc"
         />
     );
 };
@@ -318,58 +318,58 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                       // Keep modal open on hover (desktop).
                       onMouseEnter={() => setIsHovering(true)}
                       onMouseLeave={() => setIsHovering(false)}
-                      data-oid="7eilx1z"
+                      data-oid="7rbb6gt"
                   >
                       {/* Close button for mobile */}
                       <button
                           onClick={() => setShowModal(false)}
                           className="absolute top-0 right-0 text-white bg-gray-800 hover:bg-gradient-to-r hover:from-violet-500/80 hover:to-purple-400/80 px-3 py-2 rounded-md z-10 border border-gray-400/50"
-                          data-oid="kx31_ub"
+                          data-oid="13twpso"
                       >
-                          <XMarkIcon className="size-6" data-oid="ozxrza0" />
+                          <XMarkIcon className="size-6" data-oid="3hk:fvm" />
                       </button>
                       {/* Episodes Count Bubble */}
                       {episodesCount !== null && (
                           <div
                               className="absolute top-0 left-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md rounded-b-none rounded-r-none shadow-lg"
-                              data-oid="6t.2xue"
+                              data-oid="zftwsc3"
                           >
-                              <p className="text-gray-700 text-sm" data-oid=":3it4o8">
+                              <p className="text-gray-700 text-sm" data-oid="5mc2mac">
                                   {episodesCount}
                               </p>
-                              <p className="text-xs" data-oid="0b-:.s3">
+                              <p className="text-xs" data-oid="grv.9eu">
                                   Ep{episodesCount > 1 ? 's' : ''}
                               </p>
                           </div>
                       )}
                       {/* Title and Year */}
-                      <div className="flex flex-col w-full" data-oid="nz2hkva">
+                      <div className="flex flex-col w-full" data-oid="rasnroy">
                           <h3
                               className="pl-8 h-11 lg:pb:2 pt-2 bg-gray-700/40 backdrop-blur-md text-md sm:text-lg md:text-xl font-semibold text-white text-clip line-clamp-1"
-                              data-oid="kigyton"
+                              data-oid=".szn3du"
                           >
                               {card?.title || 'Loading...'}
                           </h3>
 
                           <div
                               className="flex pb-2 items-center space-x-2 mt-1 text-sm sm:text-md"
-                              data-oid="s4.0547"
+                              data-oid="1_h_eho"
                           >
                               <span
                                   className="text-yellow-400 flex gap-1 items-center"
-                                  data-oid="ccc85j0"
+                                  data-oid="3a2l2v2"
                               >
-                                  <StarIcon className="size-3" data-oid="3u-sep_" /> 0
+                                  <StarIcon className="size-3" data-oid="lkxdm4k" /> 0
                               </span>
-                              <span className="text-gray-300" data-oid="u4gz78y">
+                              <span className="text-gray-300" data-oid="8.b-p7p">
                                   • {card?.year || '----'}
                               </span>
-                              <span className="text-purple-300 text-sm" data-oid="u1zpo-6">
+                              <span className="text-purple-300 text-sm" data-oid="gzr3yfl">
                                   •
                               </span>
                               <span
                                   className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm"
-                                  data-oid="e5qm7k:"
+                                  data-oid="klxxig5"
                               >
                                   TV Series
                               </span>
@@ -377,12 +377,12 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                       </div>
                       {/* Conditionally render TrailersComp if trailers exist, otherwise show banner slideshow */}
                       {card?.trailers && card.trailers.length > 0 ? (
-                          <TrailersComp trailers={card.trailers} data-oid="s4lp0xx" />
+                          <TrailersComp trailers={card.trailers} data-oid="mg.3gcz" />
                       ) : (
                           card.banner && (
                               <div
                                   className="relative w-full h-56 overflow-hidden rounded-md mb-4"
-                                  data-oid=":lwwujl"
+                                  data-oid="am5nb8b"
                               >
                                   <BannerImage
                                       key={bannerIndex}
@@ -391,7 +391,7 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                                           `https://placehold.co/640x360?text=Preview+Not+Available`
                                       }
                                       alt="Banner Preview"
-                                      data-oid="ew76rr4"
+                                      data-oid="rg2q:ve"
                                   />
 
                                   {card.banner.length > 1 && (
@@ -399,21 +399,21 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                                           <button
                                               onClick={handlePrev}
                                               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                                              data-oid="e1byd3x"
+                                              data-oid="52fqji4"
                                           >
                                               <ArrowLeftCircleIcon
                                                   className="size-10 text-violet-400"
-                                                  data-oid="11z:uub"
+                                                  data-oid="pfd5ll1"
                                               />
                                           </button>
                                           <button
                                               onClick={handleNext}
                                               className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                                              data-oid="vlmc2.7"
+                                              data-oid="7crzioz"
                                           >
                                               <ArrowRightCircleIcon
                                                   className="size-10 text-violet-400"
-                                                  data-oid="wk_q3tn"
+                                                  data-oid="ka3n9-h"
                                               />
                                           </button>
                                       </>
@@ -424,19 +424,19 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                       {/* Overview text */}
                       <div
                           className="text-gray-300 text-base sm:text-lg overflow-hidden line-clamp-4 transition-all duration-300 mb-4"
-                          data-oid="x0lh765"
+                          data-oid="t_k7si9"
                       >
                           {card.overview}
                       </div>
                       {/* View Details Button */}
-                      <div className="flex flex-row" data-oid="4mw8_lt">
-                          <Link href={`/tvshow/${title}`} data-oid="8r6-_jd">
+                      <div className="flex flex-row" data-oid="k5y.wvm">
+                          <Link href={`/tvshow/${title}`} data-oid="o8tw8:z">
                               <button
                                   className="text-white bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 rounded-3xl flex items-center text-sm md:text-base transition-all duration-750 ease-in-out gap-0.5"
-                                  data-oid="uhnt09p"
+                                  data-oid="624uoik"
                               >
                                   View Details
-                                  <ChevronRightIcon className="size-4" data-oid="wncb4k_" />
+                                  <ChevronRightIcon className="size-4" data-oid="hyvu.bg" />
                               </button>
                           </Link>
                       </div>
@@ -457,23 +457,23 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                 onTouchStart={handleTouchStart} // Detect touch start
                 onTouchEnd={handleTouchEnd} // Detect touch end
                 onTouchCancel={handleTouchCancel} // Detect touch cancel
-                data-oid="-z8952k"
+                data-oid="lh2xxx4"
             >
                 <div
                     className="rounded-lg border border-gray-400/50 overflow-hidden relative transition-transform duration-300 w-[140px] sm:w-[150px] md:w-[180px] lg:w-[180px] xl:w-[200px]
                                                      h-[210px] sm:h-[220px] md:h-[250px] lg:h-[280px] xl:h-[300px]"
-                    data-oid="3vyn_4l"
+                    data-oid="setersn"
                 >
                     {/* Episodes Count Bubble */}
                     {episodesCount !== null && (
                         <div
                             className="absolute top-0 right-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md shadow-lg"
-                            data-oid="-_4dmsd"
+                            data-oid="furp0og"
                         >
-                            <p className="text-gray-700 text-sm" data-oid=".pj-hyd">
+                            <p className="text-gray-700 text-sm" data-oid="flea-e9">
                                 {episodesCount}
                             </p>
-                            <p className="text-xs" data-oid="5-lcbyc">
+                            <p className="text-xs" data-oid="hxn4ppf">
                                 Ep{episodesCount > 1 ? 's' : ''}
                             </p>
                         </div>
@@ -482,7 +482,7 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                     {!imageLoaded && (
                         <div
                             className="absolute inset-0 bg-gray-700 animate-pulse rounded-lg"
-                            data-oid="frm9rvn"
+                            data-oid="0e2vqfn"
                         />
                     )}
                     {/* Card Image (fixed once randomly selected) */}
@@ -494,32 +494,32 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                                 imageLoaded ? 'opacity-100' : 'opacity-0'
                             }`}
                             onLoad={() => setImageLoaded(true)}
-                            data-oid="0hc8wq2"
+                            data-oid="mythphx"
                         />
                     )}
                     {/* Overlay */}
                     <div
                         className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                        data-oid="tb81i--"
+                        data-oid="7x6ktha"
                     >
-                        <div className="absolute bottom-0 p-4 w-full" data-oid="f46b6qp">
+                        <div className="absolute bottom-0 p-4 w-full" data-oid=".kzhp_f">
                             <h3
                                 className="text-sm sm:text-base md:text-lg font-semibold text-white"
-                                data-oid="026hkyf"
+                                data-oid="x3lwlwr"
                             >
                                 {card?.title || 'Loading...'}
                             </h3>
                             <div
                                 className="flex items-center space-x-2 mt-1 text-xs sm:text-sm"
-                                data-oid="1o._m6x"
+                                data-oid="wrjg0lh"
                             >
                                 <span
                                     className="text-yellow-400 flex gap-1 items-center"
-                                    data-oid="z-:ph-:"
+                                    data-oid="w.6-2n3"
                                 >
-                                    <StarIcon className="size-3" data-oid="8n:436:" /> 0
+                                    <StarIcon className="size-3" data-oid="brgu2wx" /> 0
                                 </span>
-                                <span className="text-gray-300" data-oid="-lsbeql">
+                                <span className="text-gray-300" data-oid="glotrpy">
                                     • {card?.year || '----'}
                                 </span>
                             </div>

@@ -41,7 +41,7 @@ export default function MovieTitlePage() {
     }, [decodedTitle]);
 
     if (!movie) {
-        return <LoadingSkeleton data-oid="2kbdji3" />;
+        return <LoadingSkeleton data-oid="dakzqjj" />;
     }
 
     return (
@@ -53,31 +53,31 @@ export default function MovieTitlePage() {
                 backgroundPosition: 'top',
                 backgroundAttachment: 'fixed',
             }}
-            data-oid="x7w6uwr"
+            data-oid="0lern06"
         >
             {/* Gradient Overlays */}
-            <div className="h-screen fixed inset-0" data-oid="6ee9zse">
+            <div className="h-screen fixed inset-0" data-oid="0-.dsrx">
                 <div
                     className="h-full bg-gradient-to-b from-gray-900/90 via-gray-900/50 to-gray-900/90"
-                    data-oid="c7yb81x"
+                    data-oid="br2wg-q"
                 ></div>
             </div>
 
             {/* Main Content Container */}
             <div
                 className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-                data-oid="2341lxd"
+                data-oid="wkqnw:g"
             >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-oid="l_-n6l4">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-oid="c_b-zvr">
                     {/* Left Column - Main Info */}
-                    <div className="lg:col-span-2 space-y-6" data-oid="npwt.0m">
+                    <div className="lg:col-span-2 space-y-6" data-oid="ae1up0e">
                         <div
                             className="bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50"
-                            data-oid="o:ooqu0"
+                            data-oid="fu.xpzj"
                         >
                             {/* Title and Year */}
-                            <div className="space-y-2" data-oid="w-.mxyo">
-                                <h1 className="text-4xl font-bold text-white" data-oid="jns1a95">
+                            <div className="space-y-2" data-oid="9qpaye3">
+                                <h1 className="text-4xl font-bold text-white" data-oid="avg5iop">
                                     {movie.translations?.nameTranslations?.find(
                                         (t: { language: string; name: string }) =>
                                             t.language === 'eng',
@@ -94,15 +94,15 @@ export default function MovieTitlePage() {
                                 </h1>
                                 <div
                                     className="flex items-center gap-3 text-gray-300"
-                                    data-oid="uio-u7."
+                                    data-oid="2l8v1kx"
                                 >
-                                    <span className="text-lg" data-oid="tuusy2i">
+                                    <span className="text-lg" data-oid="-7sqrpb">
                                         {movie.year}
                                     </span>
-                                    <span data-oid="7iman:0">•</span>
+                                    <span data-oid="cmm2v.r">•</span>
                                     <span
                                         className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm"
-                                        data-oid="61w_scc"
+                                        data-oid="-w32b8p"
                                     >
                                         Movie
                                     </span>
@@ -111,24 +111,24 @@ export default function MovieTitlePage() {
                             {/* Genres and Score */}
                             <div
                                 className="flex flex-wrap items-center gap-4 mt-4"
-                                data-oid="yw.smp6"
+                                data-oid="dlaun5u"
                             >
-                                <div className="flex items-center gap-2" data-oid="iy4z0ph">
+                                <div className="flex items-center gap-2" data-oid="rur:pjx">
                                     <span
                                         className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium"
-                                        data-oid="65txx_:"
+                                        data-oid=":o2.rlw"
                                     >
                                         ⭐ {movie.score ? (movie.score / 1000).toFixed(1) : 'N/A'}
                                     </span>
                                 </div>
-                                <div className="flex flex-wrap gap-2" data-oid="c07yq8k">
+                                <div className="flex flex-wrap gap-2" data-oid="19mb0s5">
                                     {Array.isArray(movie.genres)
                                         ? movie.genres.map((genre) => (
                                               <Link
                                                   key={genre.id}
                                                   href={`/genre/${encodeURIComponent(genre.slug)}`}
                                                   className="bg-gray-700/50 hover:bg-gray-600/50 text-gray-200 px-3 py-1 rounded-full text-sm transition-colors"
-                                                  data-oid="ia53a1p"
+                                                  data-oid=".zt2m0l"
                                               >
                                                   {genre.name}
                                               </Link>
@@ -139,14 +139,14 @@ export default function MovieTitlePage() {
                             {/* Content Ratings */}
                             {Array.isArray(movie.contentRatings) &&
                             movie.contentRatings.length > 0 ? (
-                                <div className="mt-6" data-oid="lhwethk">
+                                <div className="mt-6" data-oid=".k6cn7e">
                                     <h3
                                         className="text-lg font-semibold text-gray-200 mb-3"
-                                        data-oid="--23zep"
+                                        data-oid="t99qd2g"
                                     >
                                         Content Ratings
                                     </h3>
-                                    <ul className="flex flex-wrap gap-3" data-oid="4zqjdg9">
+                                    <ul className="flex flex-wrap gap-3" data-oid="a-nhk3z">
                                         {movie.contentRatings.map((rating, index) => {
                                             const countryFlags = {
                                                 AUS: '🇦🇺',
@@ -171,20 +171,20 @@ export default function MovieTitlePage() {
                                                 <li
                                                     key={index}
                                                     className="flex items-center bg-gray-800/50 px-2 py-1 rounded-md text-xs"
-                                                    data-oid="bhrkri6"
+                                                    data-oid="r2crhho"
                                                 >
-                                                    <span className="mr-2" data-oid="l7jd51:">
+                                                    <span className="mr-2" data-oid="ebk5aac">
                                                         {flag}
                                                     </span>
                                                     <span
                                                         className="text-white font-semibold"
-                                                        data-oid="002n295"
+                                                        data-oid="q6hy15f"
                                                     >
                                                         {rating.name}
                                                     </span>
                                                     <span
                                                         className="text-gray-400 ml-1"
-                                                        data-oid="gcuvkk_"
+                                                        data-oid="xrlp4qt"
                                                     >
                                                         {' '}
                                                         - {rating.description || 'N/A'}
@@ -195,7 +195,7 @@ export default function MovieTitlePage() {
                                     </ul>
                                 </div>
                             ) : (
-                                <p className="text-gray-400 text-sm" data-oid="x4kkvx6">
+                                <p className="text-gray-400 text-sm" data-oid="ia2q3gp">
                                     No content ratings available.
                                 </p>
                             )}
@@ -203,20 +203,20 @@ export default function MovieTitlePage() {
                             {/* Action Buttons */}
                             <div
                                 className="flex justify-start landscape:gap-2 mt-4"
-                                data-oid="qkn7cky"
+                                data-oid="8j3i0_4"
                             >
                                 <Link
                                     href={`/watch/movie/${encodeURIComponent(decodedTitle)}`}
                                     className="bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 md:px-8 landscape:rounded-3xl rounded-s-2xl flex items-center gap-1 transition-colors text-sm md:text-base"
-                                    data-oid="7w.o-jh"
+                                    data-oid="cb1-0jf"
                                 >
-                                    <PlayIcon className="size-5" data-oid="jv2r_fw" />
+                                    <PlayIcon className="size-5" data-oid="525kqgp" />
                                     Play Now
                                 </Link>
                                 <Link
                                     href="#"
                                     className="bg-gray-800/80 hover:bg-gray-700/80 px-4 py-2 md:px-8 landscape:rounded-3xl rounded-e-2xl transition-colors text-sm md:text-base"
-                                    data-oid="b28xbjb"
+                                    data-oid="gz:qpdw"
                                 >
                                     Add to My List
                                 </Link>
@@ -225,15 +225,15 @@ export default function MovieTitlePage() {
                         {/* Overview Section */}
                         <div
                             className="bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50"
-                            data-oid="xe.gue5"
+                            data-oid="95m7v61"
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-200 mb-3"
-                                data-oid="f-xx5c2"
+                                data-oid="5r4vese"
                             >
                                 Overview
                             </h3>
-                            <p className="text-gray-300 leading-relaxed" data-oid="uqwo6hu">
+                            <p className="text-gray-300 leading-relaxed" data-oid="r:c6gc8">
                                 {movie.translations?.overviewTranslations?.find(
                                     (t: { language: string; overview: string }) =>
                                         t.language === 'eng',
@@ -245,8 +245,8 @@ export default function MovieTitlePage() {
                     </div>
 
                     {/* Right Column - Cast */}
-                    <div className="lg:col-span-1" data-oid="n_1kww5">
-                        <CastSection movie={movie} data-oid="lf5_ymh" />
+                    <div className="lg:col-span-1" data-oid="n4e4wuw">
+                        <CastSection movie={movie} data-oid=".mbt5mq" />
                     </div>
                 </div>
             </div>

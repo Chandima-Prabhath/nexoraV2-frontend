@@ -71,7 +71,7 @@ const BannerImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
                 visible ? 'opacity-100' : 'opacity-0'
             }`}
-            data-oid="uhv5rqe"
+            data-oid="b4g7dqc"
         />
     );
 };
@@ -299,41 +299,41 @@ export const MovieCard: React.FC<MovieCardProps> = ({ title }) => {
                       className="bg-gray-800/60 backdrop-blur-md rounded-lg p-2.5 border border-gray-400/50 transition-all flex flex-col justify-between pt-0"
                       onMouseEnter={() => setIsHovering(true)}
                       onMouseLeave={() => setIsHovering(false)}
-                      data-oid="pajmk3s"
+                      data-oid="dpqjla2"
                   >
                       <button
                           onClick={() => setShowModal(false)}
                           className="absolute top-0 right-0 text-white bg-gray-800 hover:bg-gradient-to-r hover:from-violet-500/80 hover:to-purple-400/80 px-3 py-2 rounded-md z-10 border border-gray-400/50"
-                          data-oid="7r95:f9"
+                          data-oid="rvvthe8"
                       >
-                          <XMarkIcon className="size-6" data-oid="ayit1yl" />
+                          <XMarkIcon className="size-6" data-oid="ayaap0d" />
                       </button>
-                      <div className="flex flex-col w-full" data-oid="l9g0cqm">
+                      <div className="flex flex-col w-full" data-oid="3-it5d:">
                           <h3
                               className="pb-2 pl-2 pt-2 bg-gray-700/40 backdrop-blur-md text-md sm:text-lg md:text-xl font-semibold text-white text-clip line-clamp-1"
-                              data-oid="e.spq7:"
+                              data-oid="4xwj3gc"
                           >
                               {card?.title || 'Loading...'}
                           </h3>
                           <div
                               className="flex pb-2 items-center space-x-2 mt-1 text-sm sm:text-md"
-                              data-oid="y9a:sro"
+                              data-oid="9ms6ac_"
                           >
                               <span
                                   className="text-yellow-400 flex gap-1 items-center"
-                                  data-oid="rv-s-0m"
+                                  data-oid="3b9ozsc"
                               >
-                                  <StarIcon className="size-3" data-oid="f5ac4wn" /> 0
+                                  <StarIcon className="size-3" data-oid="fdm:fpm" /> 0
                               </span>
-                              <span className="text-gray-300" data-oid="y1ijg1c">
+                              <span className="text-gray-300" data-oid="7x_rz81">
                                   • {card?.year || '----'}
                               </span>
-                              <span className="text-purple-300 text-sm" data-oid="ekq164i">
+                              <span className="text-purple-300 text-sm" data-oid="v_qahha">
                                   •
                               </span>
                               <span
                                   className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm"
-                                  data-oid="4.eka3u"
+                                  data-oid="d2upyq:"
                               >
                                   Movie
                               </span>
@@ -341,12 +341,12 @@ export const MovieCard: React.FC<MovieCardProps> = ({ title }) => {
                       </div>
                       {/* Conditionally render TrailersComp if trailers exist, otherwise show banner slideshow */}
                       {card?.trailers && card.trailers.length > 0 ? (
-                          <TrailersComp trailers={card.trailers} data-oid=".37svav" />
+                          <TrailersComp trailers={card.trailers} data-oid="xyi-qgr" />
                       ) : (
                           card.banner && (
                               <div
                                   className="relative w-full h-56 overflow-hidden rounded-md mb-4"
-                                  data-oid="uk0o7pf"
+                                  data-oid="9km6lvh"
                               >
                                   <BannerImage
                                       key={bannerIndex}
@@ -355,7 +355,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({ title }) => {
                                           `https://placehold.co/640x360?text=Preview+Not+Available`
                                       }
                                       alt="Banner Preview"
-                                      data-oid="gjfe1y6"
+                                      data-oid="xlvdpue"
                                   />
 
                                   {card.banner.length > 1 && (
@@ -363,21 +363,21 @@ export const MovieCard: React.FC<MovieCardProps> = ({ title }) => {
                                           <button
                                               onClick={handlePrev}
                                               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                                              data-oid="ukdq73g"
+                                              data-oid="n49nyxy"
                                           >
                                               <ArrowLeftCircleIcon
                                                   className="size-10 text-violet-400"
-                                                  data-oid="ha_9oje"
+                                                  data-oid="jtfumud"
                                               />
                                           </button>
                                           <button
                                               onClick={handleNext}
                                               className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                                              data-oid="9dpgc1n"
+                                              data-oid="3x6-zo9"
                                           >
                                               <ArrowRightCircleIcon
                                                   className="size-10 text-violet-400"
-                                                  data-oid=":qybz26"
+                                                  data-oid="i03qq2k"
                                               />
                                           </button>
                                       </>
@@ -385,21 +385,21 @@ export const MovieCard: React.FC<MovieCardProps> = ({ title }) => {
                               </div>
                           )
                       )}
-                      <div data-oid="x4vwnjn">
+                      <div data-oid="b9plv9c">
                           <div
                               className="text-gray-300 text-base sm:text-lg overflow-hidden line-clamp-4 transition-all duration-300 mb-4"
-                              data-oid="nqbcaku"
+                              data-oid="fex8:7-"
                           >
                               {card.overview || 'No overview available.'}
                           </div>
-                          <div className="flex flex-row items-center" data-oid="r7lbrjp">
-                              <Link href={`/movie/${title}`} data-oid=".mr1n6.">
+                          <div className="flex flex-row items-center" data-oid=":m-_6br">
+                              <Link href={`/movie/${title}`} data-oid="vv7k0rh">
                                   <button
                                       className="text-white bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 rounded-3xl flex items-center text-sm md:text-base transition-all duration-750 ease-in-out gap-0.5"
-                                      data-oid="p5qlcbw"
+                                      data-oid="g92xp:s"
                                   >
                                       View Details{' '}
-                                      <ChevronRightIcon className="size-4" data-oid="cllxai-" />
+                                      <ChevronRightIcon className="size-4" data-oid=":a8uvl8" />
                                   </button>
                               </Link>
                           </div>
@@ -421,16 +421,16 @@ export const MovieCard: React.FC<MovieCardProps> = ({ title }) => {
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
                 onTouchCancel={handleTouchCancel}
-                data-oid="qf8f-b1"
+                data-oid="grvq8ho"
             >
                 <div
                     className="rounded-lg border border-gray-400/50 overflow-hidden relative transition-transform duration-300 w-[140px] sm:w-[150px] md:w-[180px] lg:w-[180px] xl:w-[200px] h-[210px] sm:h-[220px] md:h-[250px] lg:h-[280px] xl:h-[300px]"
-                    data-oid="mqh8555"
+                    data-oid="4qn9_ud"
                 >
                     {!imageLoaded && (
                         <div
                             className="absolute inset-0 bg-gray-700 animate-pulse rounded-lg"
-                            data-oid="thj062z"
+                            data-oid="meig0mx"
                         />
                     )}
                     {cardImage && (
@@ -441,31 +441,31 @@ export const MovieCard: React.FC<MovieCardProps> = ({ title }) => {
                                 imageLoaded ? 'opacity-100' : 'opacity-0'
                             }`}
                             onLoad={() => setImageLoaded(true)}
-                            data-oid=":3wn4vl"
+                            data-oid="5xn2qm2"
                         />
                     )}
                     <div
                         className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                        data-oid="3_332cc"
+                        data-oid="issmtzc"
                     >
-                        <div className="absolute bottom-0 p-4 w-full" data-oid=".d3rbpd">
+                        <div className="absolute bottom-0 p-4 w-full" data-oid="2r1qv80">
                             <h3
                                 className="text-sm sm:text-base md:text-lg font-semibold text-white"
-                                data-oid="3d41hxi"
+                                data-oid=":u4b.e9"
                             >
                                 {card?.title || 'Loading...'}
                             </h3>
                             <div
                                 className="flex items-center space-x-2 mt-1 text-xs sm:text-sm"
-                                data-oid="egl0-ie"
+                                data-oid="0h5gn31"
                             >
                                 <span
                                     className="text-yellow-400 flex gap-1 items-center"
-                                    data-oid=":x8-9ig"
+                                    data-oid="4vkk06a"
                                 >
-                                    <StarIcon className="size-3" data-oid="vgza.vo" /> 0
+                                    <StarIcon className="size-3" data-oid="fi3c6-n" /> 0
                                 </span>
-                                <span className="text-gray-300" data-oid="u71idgp">
+                                <span className="text-gray-300" data-oid="g1ly8q:">
                                     • {card?.year || '----'}
                                 </span>
                             </div>

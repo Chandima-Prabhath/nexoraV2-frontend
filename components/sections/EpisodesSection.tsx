@@ -27,11 +27,11 @@ export default function EpisodesSection({
     return (
         <div
             className="bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50"
-            data-oid="1k.l-s8"
+            data-oid="ugox-.2"
         >
-            <div className="flex flex-col space-y-4" data-oid="00kr_pi">
-                <div className="flex items-center justify-between" data-oid="ps:oevi">
-                    <h3 className="text-lg font-semibold text-gray-200" data-oid="t1it:v_">
+            <div className="flex flex-col space-y-4" data-oid="6a61yy-">
+                <div className="flex items-center justify-between" data-oid="3aslp6y">
+                    <h3 className="text-lg font-semibold text-gray-200" data-oid="r877mks">
                         Episodes
                     </h3>
                 </div>
@@ -39,7 +39,7 @@ export default function EpisodesSection({
                 {/* Season Buttons */}
                 <div
                     className="overflow-x-auto whitespace-nowrap flex gap-2 scrollbar-hide snap-x snap-mandatory pb-2"
-                    data-oid="8.6l5c-"
+                    data-oid="1bttne2"
                 >
                     {fileStructure.contents?.map((season, idx) => {
                         const seasonName = season.path.split('/').pop();
@@ -56,7 +56,7 @@ export default function EpisodesSection({
                                           ? 'bg-amber-500/20 text-amber-300 hover:bg-amber-500/30'
                                           : 'bg-purple-500/20 text-purple-300 hover:bg-purple-500/30'
                                 }`}
-                                data-oid="3d.2epc"
+                                data-oid="o439mna"
                             >
                                 {seasonName}
                             </button>
@@ -65,20 +65,20 @@ export default function EpisodesSection({
                 </div>
 
                 {/* Episodes List */}
-                <div className="space-y-8 mt-4" data-oid="ch_qf:z">
+                <div className="space-y-8 mt-4" data-oid="igc-jr1">
                     {activeSeasonContent && (
-                        <div key={activeSeasonName} className="space-y-4" data-oid="wc990t_">
+                        <div key={activeSeasonName} className="space-y-4" data-oid=":ovy9lv">
                             <h4
                                 className={`text-base font-medium ${
                                     activeSeasonContent.path.includes('Specials')
                                         ? 'text-amber-300'
                                         : 'text-purple-300'
                                 }`}
-                                data-oid="1j9kzne"
+                                data-oid="2r.p_k2"
                             >
                                 {activeSeasonName}
                             </h4>
-                            <div className="space-y-2" data-oid="jgc45po">
+                            <div className="space-y-2" data-oid="fcq_2v_">
                                 {activeSeasonContent.contents?.map(
                                     (episode: any, episodeIdx: number) => {
                                         const match = episode.path.match(
@@ -97,7 +97,7 @@ export default function EpisodesSection({
                                             <div
                                                 key={episodeIdx}
                                                 className="group flex items-center gap-4 p-3 rounded-xl transition-colors hover:bg-gray-700/50 cursor-pointer"
-                                                data-oid="vzpapbs"
+                                                data-oid="51_rxtp"
                                             >
                                                 {/* Episode Number */}
                                                 <div
@@ -106,7 +106,7 @@ export default function EpisodesSection({
                                                             ? 'group-hover:bg-amber-500/20'
                                                             : 'group-hover:bg-purple-500/20'
                                                     }`}
-                                                    data-oid="ru.q60w"
+                                                    data-oid="zvz3:yz"
                                                 >
                                                     <span
                                                         className={`text-lg font-semibold text-gray-300 ${
@@ -114,30 +114,30 @@ export default function EpisodesSection({
                                                                 ? 'group-hover:text-amber-300'
                                                                 : 'group-hover:text-purple-300'
                                                         }`}
-                                                        data-oid="pjq:bk1"
+                                                        data-oid="mu7:4:y"
                                                     >
                                                         {episodeNum}
                                                     </span>
                                                 </div>
 
                                                 {/* Episode Info */}
-                                                <div className="flex-grow" data-oid="z1084fe">
+                                                <div className="flex-grow" data-oid="yuk0vmd">
                                                     <h4
                                                         className="text-gray-200 font-medium"
-                                                        data-oid=":2jll8m"
+                                                        data-oid="z-ijbg4"
                                                     >
                                                         {episodeTitle.replace(/_/g, ' ')}
                                                     </h4>
                                                     <div
                                                         className="flex items-center gap-3 text-sm text-gray-400"
-                                                        data-oid="xxyf-rg"
+                                                        data-oid="n.vrau1"
                                                     >
-                                                        <span data-oid=".10b7li">
+                                                        <span data-oid="zxiyz3-">
                                                             {Math.round(episode.size / 1024 / 1024)}{' '}
                                                             MB
                                                         </span>
-                                                        <span data-oid="315j1f_">•</span>
-                                                        <span data-oid="arw:4z9">
+                                                        <span data-oid="8gq2r7c">•</span>
+                                                        <span data-oid="w6b7sj6">
                                                             {episode.path.includes('720p')
                                                                 ? 'HD'
                                                                 : 'SD'}
@@ -153,17 +153,17 @@ export default function EpisodesSection({
                                                             ? 'bg-amber-500/20 hover:bg-amber-500/30'
                                                             : 'bg-purple-500/20 hover:bg-purple-500/30'
                                                     }`}
-                                                    data-oid="horxee2"
+                                                    data-oid="vk7n7il"
                                                 >
                                                     <svg
                                                         className="w-5 h-5"
                                                         fill="currentColor"
                                                         viewBox="0 0 20 20"
-                                                        data-oid="nbfbw.i"
+                                                        data-oid="ouhkqlk"
                                                     >
                                                         <path
                                                             d="M4 4l12 6-12 6V4z"
-                                                            data-oid="n.b71t2"
+                                                            data-oid="l:bw2br"
                                                         />
                                                     </svg>
                                                 </Link>
