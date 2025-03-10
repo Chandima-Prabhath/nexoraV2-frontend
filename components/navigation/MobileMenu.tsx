@@ -17,44 +17,44 @@ export const MobileMenu = ({ isOpen }: MobileMenuProps) => {
             leave="transition ease-in duration-200"
             leaveFrom="opacity-100 transform scale-100"
             leaveTo="opacity-0 transform scale-95"
-            data-oid="nwd51ke"
+            data-oid="z10rauz"
         >
             <div
                 className="md:hidden bg-gray-900 border-t border-gray-900 bg-opacity-50 backdrop-blur-lg"
-                data-oid="wxr9fto"
+                data-oid="38c1q_z"
             >
-                <div className="px-6 py-4 space-y-4" data-oid="vk_jznl">
+                <div className="px-6 py-4 space-y-4" data-oid="sra755r">
                     <Link
                         href="/"
                         className="block hover:text-purple-400 transition-colors"
-                        data-oid="di7h_s8"
+                        data-oid="i16t_ox"
                     >
                         Home
                     </Link>
                     <Link
                         href="/browse/movies"
                         className="block hover:text-purple-400 transition-colors"
-                        data-oid="::e1v3l"
+                        data-oid="cb25ye1"
                     >
                         Movies
                     </Link>
                     <Link
                         href="/browse/tvshows"
                         className="block hover:text-purple-400 transition-colors"
-                        data-oid="sckwvhe"
+                        data-oid="_7ofthy"
                     >
                         TV Shows
                     </Link>
                     <Link
                         href="/mylist"
                         className="block hover:text-purple-400 transition-colors"
-                        data-oid="tam_u1k"
+                        data-oid="vbvgfrr"
                     >
                         My List
                     </Link>
                     <button
                         className="w-full bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-6 py-2 rounded-full transition-colors"
-                        data-oid="k8swkjc"
+                        data-oid="t-33u23"
                     >
                         Sign In
                     </button>

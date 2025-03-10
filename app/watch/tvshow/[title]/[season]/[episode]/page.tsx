@@ -14,7 +14,7 @@ const TvShowPlayerPage = () => {
     };
 
     if (!title || !season || !episode) {
-        return <div data-oid="jlx4rr5">tvshow title, season or episode is missing.</div>;
+        return <div data-oid="o4ql78x">tvshow title, season or episode is missing.</div>;
     }
     return (
         <TvShowPlayer
@@ -22,7 +22,7 @@ const TvShowPlayerPage = () => {
             season={season as string}
             episode={episode as string}
             onClosePlayer={handleClose}
-            data-oid="g1cs-r4"
+            data-oid="rlyi-:l"
         />
     );
 };

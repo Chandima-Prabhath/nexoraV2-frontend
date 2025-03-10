@@ -54,12 +54,12 @@ function MoviesContent() {
     };
 
     return (
-        <div className="portrait:p-2 p-4" data-oid="fvshohr">
+        <div className="portrait:p-2 p-4" data-oid="x8s3n4t">
             {loading ? (
-                <div className="flex items-center justify-center min-h-[60vh]" data-oid="bvikmt-">
+                <div className="flex items-center justify-center min-h-[60vh]" data-oid="1u8kn1q">
                     <div
                         className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                        data-oid="rtqwuek"
+                        data-oid="pt2iydq"
                     ></div>
                 </div>
             ) : (
@@ -68,15 +68,15 @@ function MoviesContent() {
                     <div
                         key={currentPage}
                         className="flex flex-wrap justify-center items-center portrait:gap-2 gap-10"
-                        data-oid="aln__mo"
+                        data-oid="ilcco30"
                     >
                         {movies.map((movie, index) => (
                             <div
                                 key={`${movie.title}-${index}`}
                                 className="transform transition-transform duration-300 hover:scale-105 w-[fit-content]"
-                                data-oid="769vh_3"
+                                data-oid="h._eugj"
                             >
-                                <MovieCard title={movie.title} data-oid="ypnr91j" />
+                                <MovieCard title={movie.title} data-oid="2.n-0oc" />
                             </div>
                         ))}
                     </div>
@@ -84,28 +84,28 @@ function MoviesContent() {
                     {/* Pagination */}
                     <div
                         className="mt-12 flex flex-row items-center justify-center gap-2"
-                        data-oid="y9gjnx6"
+                        data-oid=".so08.6"
                     >
-                        <div className="flex items-center gap-2" data-oid="khk:95c">
+                        <div className="flex items-center gap-2" data-oid="zd35rdk">
                             <button
                                 onClick={() => handlePageChange(1)}
                                 disabled={currentPage <= 1}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="h_956lx"
+                                data-oid="6t02iwf"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="jdlqnep"
+                                    data-oid="6a9.efw"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
-                                        data-oid="d2gu_mw"
+                                        data-oid="3gh3.o:"
                                     />
                                 </svg>
                             </button>
@@ -113,55 +113,55 @@ function MoviesContent() {
                                 onClick={() => handlePageChange(currentPage - 1)}
                                 disabled={currentPage <= 1}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="5yi3mm4"
+                                data-oid="shiqr:_"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="gk-zc44"
+                                    data-oid="uxoojtr"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M15 19l-7-7 7-7"
-                                        data-oid="_jaw6sg"
+                                        data-oid="spjuq3-"
                                     />
                                 </svg>
                             </button>
                         </div>
 
-                        <div className="flex items-center gap-2" data-oid="d.gjt6x">
+                        <div className="flex items-center gap-2" data-oid="16grr6e">
                             <span
                                 className="px-4 py-2 rounded-lg bg-gray-800 text-white font-medium"
-                                data-oid="wir:k4e"
+                                data-oid="mhoxl4u"
                             >
                                 Page {currentPage} of {totalPages}
                             </span>
                         </div>
 
-                        <div className="flex items-center gap-2" data-oid="bs-wdt.">
+                        <div className="flex items-center gap-2" data-oid="utfxm5r">
                             <button
                                 onClick={() => handlePageChange(currentPage + 1)}
                                 disabled={currentPage >= totalPages}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="zr44.g5"
+                                data-oid="d1zjjob"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="v3y5gev"
+                                    data-oid="cqrc4ot"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M9 5l7 7-7 7"
-                                        data-oid="r9qw8a8"
+                                        data-oid="esdqoac"
                                     />
                                 </svg>
                             </button>
@@ -169,21 +169,21 @@ function MoviesContent() {
                                 onClick={() => handlePageChange(totalPages)}
                                 disabled={currentPage >= totalPages}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="v0wgcaw"
+                                data-oid="n_413i7"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="b__v.hd"
+                                    data-oid="mk3-2xz"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                                        data-oid="ha_gdi9"
+                                        data-oid="tedr0nx"
                                     />
                                 </svg>
                             </button>
@@ -199,21 +199,21 @@ export default function MoviesPage() {
     const [filterActive, setFilterActive] = useState(false);
 
     return (
-        <div className="page min-h-screen pt-20 pb-4" data-oid="c30dpdf">
-            <div className="container mx-auto portrait:px-3 px-4" data-oid="qc8wc5o">
+        <div className="page min-h-screen pt-20 pb-4" data-oid="_yejfcp">
+            <div className="container mx-auto portrait:px-3 px-4" data-oid="1.5faxx">
                 {/* Header Section */}
-                <div className="mb-8 space-y-2" data-oid="l_h1wg-">
-                    <h2 className="text-4xl font-bold text-white" data-oid="q5f:fz6">
+                <div className="mb-8 space-y-2" data-oid="0pf-b3w">
+                    <h2 className="text-4xl font-bold text-white" data-oid="6v6duuh">
                         Movies
                     </h2>
-                    <p className="text-gray-400 max-w-3xl" data-oid="087lc-o">
+                    <p className="text-gray-400 max-w-3xl" data-oid="ffiol30">
                         Explore our collection of movies from various genres. From action to
                         romance, find your next movie night selection here.
                     </p>
                     <GenresFilter
                         mediaType="movie"
                         onFilterChange={setFilterActive}
-                        data-oid="7v966l9"
+                        data-oid="5eko.x7"
                     />
                 </div>
 
@@ -221,23 +221,23 @@ export default function MoviesPage() {
                 {!filterActive && (
                     <div
                         className="bg-gray-800/30 rounded-3xl backdrop-blur-sm border border-gray-700/50"
-                        data-oid="go9ax7."
+                        data-oid="l:9v8r3"
                     >
                         <Suspense
                             fallback={
                                 <div
                                     className="flex items-center justify-center min-h-[50vh]"
-                                    data-oid=":rp_h5l"
+                                    data-oid="s1:d9wz"
                                 >
                                     <div
                                         className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                        data-oid="w:3x912"
+                                        data-oid="nucjkwd"
                                     ></div>
                                 </div>
                             }
-                            data-oid="fvt3emu"
+                            data-oid="d71.nt8"
                         >
-                            <MoviesContent data-oid="tgt2kr2" />
+                            <MoviesContent data-oid="yoa8n_h" />
                         </Suspense>
                     </div>
                 )}

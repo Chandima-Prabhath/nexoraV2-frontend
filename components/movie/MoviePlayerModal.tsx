@@ -251,9 +251,9 @@ const MoviePlayerModal: React.FC<MoviePlayerModalProps> = ({
         <div
             className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
             onMouseMove={resetInactivityTimer}
-            data-oid="gr7.4q9"
+            data-oid="q2a7-5g"
         >
-            <div className="relative w-full h-full" ref={containerRef} data-oid="4g9fqds">
+            <div className="relative w-full h-full" ref={containerRef} data-oid="hd1k5_5">
                 <video
                     ref={videoRef}
                     src={videoBlobUrl || videoUrl}
@@ -266,18 +266,18 @@ const MoviePlayerModal: React.FC<MoviePlayerModalProps> = ({
                     onCanPlay={() => setSpinnerLoading(false)}
                     onPlaying={() => setSpinnerLoading(false)}
                     autoPlay
-                    data-oid="s8jxm43"
+                    data-oid="--qmdy."
                 />
 
                 {showRatingOverlay && contentRatings.length > 0 && (
                     <div
                         className="absolute z-30 pointer-events-none"
                         style={{ top: '80px', left: '20px' }}
-                        data-oid="26uj.jk"
+                        data-oid="6bfkbdc"
                     >
                         <div
                             className="px-6 py-3 bg-black bg-opacity-70 rounded-lg border border-white text-white text-3xl font-bold animate-fade-out"
-                            data-oid="o4huudt"
+                            data-oid="wiob5xx"
                         >
                             {contentRatings[0].country ? `[${contentRatings[0].country}] ` : ''}
                             {contentRatings[0].name}
@@ -288,20 +288,20 @@ const MoviePlayerModal: React.FC<MoviePlayerModalProps> = ({
                     className={`absolute inset-0 flex flex-col justify-between transition-opacity duration-300 z-40 ${
                         showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
                     }`}
-                    data-oid="gwt99if"
+                    data-oid="6-zpf9w"
                 >
                     <div
                         className="flex items-center justify-between p-6 bg-gradient-to-b from-black/90 to-transparent"
-                        data-oid="y-ywqt."
+                        data-oid=":nqlk0_"
                     >
-                        <div className="flex flex-col" data-oid="jageq1l">
-                            <h1 className="text-white text-3xl font-extrabold" data-oid=":mrvbt_">
+                        <div className="flex flex-col" data-oid="uvketwe">
+                            <h1 className="text-white text-3xl font-extrabold" data-oid="-9hgboh">
                                 {videoTitle}
                             </h1>
                             {contentRatings.length > 0 && (
                                 <div
                                     className="mt-2 inline-block bg-gray-700 text-white text-sm px-3 py-1 rounded-md"
-                                    data-oid="o3qr03s"
+                                    data-oid="rj0qjk0"
                                 >
                                     {contentRatings[0].country
                                         ? `[${contentRatings[0].country}] `
@@ -313,17 +313,17 @@ const MoviePlayerModal: React.FC<MoviePlayerModalProps> = ({
                         <button
                             onClick={handleClose}
                             className="text-white hover:text-red-400 transition-colors"
-                            data-oid="330owz4"
+                            data-oid="9yx0l9j"
                         >
-                            <XCircleIcon className="w-10 h-10" data-oid="y5b.7gv" />
+                            <XCircleIcon className="w-10 h-10" data-oid="rbfglc-" />
                         </button>
                     </div>
                     <div
                         className="flex flex-col p-6 bg-gradient-to-t from-black/90 to-transparent"
-                        data-oid="t2hi_:9"
+                        data-oid="ib7dq:k"
                     >
-                        <div className="flex items-center justify-between mb-4" data-oid="xockgo8">
-                            <span className="text-white text-sm" data-oid="_r0wwui">
+                        <div className="flex items-center justify-between mb-4" data-oid="2g2in8x">
+                            <span className="text-white text-sm" data-oid="1-e2lbk">
                                 {formatTime(currentTime)}
                             </span>
                             <input
@@ -335,38 +335,38 @@ const MoviePlayerModal: React.FC<MoviePlayerModalProps> = ({
                                 onTouchStart={handleSeekStart}
                                 onChange={handleSeekEnd}
                                 className="w-full mx-4 accent-purple-500 cursor-pointer"
-                                data-oid="jxplunv"
+                                data-oid="ts2-bpe"
                             />
 
-                            <span className="text-white text-sm" data-oid=":.a9omh">
+                            <span className="text-white text-sm" data-oid="-7irceb">
                                 {formatTime(duration)}
                             </span>
                         </div>
-                        <div className="flex items-center justify-between" data-oid="5mh.64r">
-                            <div className="flex items-center space-x-6" data-oid="v1-s8y8">
+                        <div className="flex items-center justify-between" data-oid=".::me9k">
+                            <div className="flex items-center space-x-6" data-oid="xx1cdz7">
                                 <button
                                     onClick={togglePlay}
                                     className="text-white hover:text-purple-300 transition-colors"
-                                    data-oid=".msovrz"
+                                    data-oid="81ze73a"
                                 >
                                     {isPlaying ? (
-                                        <PauseIcon className="w-10 h-10" data-oid="y-_g:m0" />
+                                        <PauseIcon className="w-10 h-10" data-oid="ahyalyp" />
                                     ) : (
-                                        <PlayIcon className="w-10 h-10" data-oid="gubg__s" />
+                                        <PlayIcon className="w-10 h-10" data-oid="n69cyap" />
                                     )}
                                 </button>
                                 <button
                                     onClick={toggleMute}
                                     className="text-white hover:text-purple-300 transition-colors"
-                                    data-oid="acvgb5x"
+                                    data-oid="0mwco-h"
                                 >
                                     {isMuted ? (
                                         <SpeakerXMarkIcon
                                             className="w-10 h-10"
-                                            data-oid="6:qnknc"
+                                            data-oid="nbifvwe"
                                         />
                                     ) : (
-                                        <SpeakerWaveIcon className="w-10 h-10" data-oid="edsvj72" />
+                                        <SpeakerWaveIcon className="w-10 h-10" data-oid="uzc.:7o" />
                                     )}
                                 </button>
                                 <input
@@ -377,23 +377,23 @@ const MoviePlayerModal: React.FC<MoviePlayerModalProps> = ({
                                     value={volume}
                                     onChange={handleVolume}
                                     className="w-24 accent-purple-500"
-                                    data-oid="kob7ehe"
+                                    data-oid="ddtr-41"
                                 />
                             </div>
                             <button
                                 onClick={toggleFullscreen}
                                 className="text-white hover:text-purple-300 transition-colors"
-                                data-oid="q6togk5"
+                                data-oid="8rzyx3e"
                             >
                                 {!isFullscreen ? (
                                     <ArrowsPointingOutIcon
                                         className="w-10 h-10"
-                                        data-oid="m5oa5si"
+                                        data-oid="-gicm52"
                                     />
                                 ) : (
                                     <ArrowsPointingInIcon
                                         className="w-10 h-10"
-                                        data-oid=":rxbd5:"
+                                        data-oid="d71t-t3"
                                     />
                                 )}
                             </button>
@@ -401,7 +401,7 @@ const MoviePlayerModal: React.FC<MoviePlayerModalProps> = ({
                     </div>
                 </div>
             </div>
-            <style jsx data-oid="9q-00-m">{`
+            <style jsx data-oid="un1i2m5">{`
                 @keyframes fade-out {
                     0% {
                         opacity: 1;

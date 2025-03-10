@@ -47,7 +47,7 @@ export default function TvShowTitlePage() {
     }, [decodedTitle]);
 
     if (!tvshow) {
-        return <LoadingSkeleton data-oid="wt9w2fo" />;
+        return <LoadingSkeleton data-oid="_3w8t4d" />;
     }
 
     return (
@@ -59,31 +59,31 @@ export default function TvShowTitlePage() {
                 backgroundPosition: 'top',
                 backgroundAttachment: 'fixed',
             }}
-            data-oid="4.jurse"
+            data-oid="bzk.v2n"
         >
             {/* Gradient Overlays */}
-            <div className="h-screen fixed inset-0" data-oid=":7b37p7">
+            <div className="h-screen fixed inset-0" data-oid=":-g.o:u">
                 <div
                     className="h-full bg-gradient-to-b from-gray-900/90 via-gray-900/50 to-gray-900/90"
-                    data-oid="srrv8s_"
+                    data-oid="sfc7-fa"
                 ></div>
             </div>
 
             {/* Main Content Container */}
             <div
                 className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-                data-oid="u-stmqh"
+                data-oid=".jh512w"
             >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-oid="6r8ultd">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-oid="0z3dz1_">
                     {/* Left Column - Main Info */}
-                    <div className="lg:col-span-2 space-y-6" data-oid="xpvg.4g">
+                    <div className="lg:col-span-2 space-y-6" data-oid="fwmcrl3">
                         <div
                             className="bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50"
-                            data-oid="5:3lc_h"
+                            data-oid="fr7ne::"
                         >
                             {/* Title and Year */}
-                            <div className="space-y-2" data-oid="bijg9ok">
-                                <h1 className="text-4xl font-bold text-white" data-oid="g.g.h9q">
+                            <div className="space-y-2" data-oid="-npgelr">
+                                <h1 className="text-4xl font-bold text-white" data-oid="zxiv3:9">
                                     {tvshow.translations?.nameTranslations?.find(
                                         (t: { language: string; name: string }) =>
                                             t.language === 'eng',
@@ -100,15 +100,15 @@ export default function TvShowTitlePage() {
                                 </h1>
                                 <div
                                     className="flex items-center gap-3 text-gray-300"
-                                    data-oid="bgr3b5u"
+                                    data-oid="rj3om:_"
                                 >
-                                    <span className="text-lg" data-oid="aiifu47">
+                                    <span className="text-lg" data-oid="0eg:rov">
                                         {tvshow.year}
                                     </span>
-                                    <span data-oid="waw327_">•</span>
+                                    <span data-oid="t.l13ek">•</span>
                                     <span
                                         className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm"
-                                        data-oid="da8mf4b"
+                                        data-oid="qxj4n8c"
                                     >
                                         TV Series
                                     </span>
@@ -117,24 +117,24 @@ export default function TvShowTitlePage() {
                             {/* Genres and Score */}
                             <div
                                 className="flex flex-wrap items-center gap-4 mt-4"
-                                data-oid="n::tuqe"
+                                data-oid="kt2dqbq"
                             >
-                                <div className="flex items-center gap-2" data-oid="zodeb7x">
+                                <div className="flex items-center gap-2" data-oid="0y.eq29">
                                     <span
                                         className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium"
-                                        data-oid="_51g95r"
+                                        data-oid="nat44-p"
                                     >
                                         ⭐ {tvshow.score ? (tvshow.score / 1000).toFixed(1) : 'N/A'}
                                     </span>
                                 </div>
-                                <div className="flex flex-wrap gap-2" data-oid="dz_1gae">
+                                <div className="flex flex-wrap gap-2" data-oid="szw96_m">
                                     {Array.isArray(tvshow.genres)
                                         ? tvshow.genres.map((genre) => (
                                               <Link
                                                   key={genre.id}
                                                   href={`/genre/${encodeURIComponent(genre.slug)}`}
                                                   className="bg-gray-700/50 hover:bg-gray-600/50 text-gray-200 px-3 py-1 rounded-full text-sm transition-colors"
-                                                  data-oid="i4eoln4"
+                                                  data-oid="mog7yu3"
                                               >
                                                   {genre.name}
                                               </Link>
@@ -145,14 +145,14 @@ export default function TvShowTitlePage() {
                             {/* Content Ratings */}
                             {Array.isArray(tvshow.contentRatings) &&
                             tvshow.contentRatings.length > 0 ? (
-                                <div className="mt-6" data-oid="54siwr_">
+                                <div className="mt-6" data-oid="ih.jvcl">
                                     <h3
                                         className="text-lg font-semibold text-gray-200 mb-3"
-                                        data-oid="nsy-_00"
+                                        data-oid="ta1:43r"
                                     >
                                         Content Ratings
                                     </h3>
-                                    <ul className="flex flex-wrap gap-3" data-oid="2:qr8cp">
+                                    <ul className="flex flex-wrap gap-3" data-oid="ej3zrlm">
                                         {tvshow.contentRatings.map((rating, index) => {
                                             const countryFlags = {
                                                 AUS: '🇦🇺',
@@ -177,20 +177,20 @@ export default function TvShowTitlePage() {
                                                 <li
                                                     key={index}
                                                     className="flex items-center bg-gray-800/50 px-2 py-1 rounded-md text-xs"
-                                                    data-oid="-u:voln"
+                                                    data-oid="x0.mw.u"
                                                 >
-                                                    <span className="mr-2" data-oid="62_8hg5">
+                                                    <span className="mr-2" data-oid="xk-ky8a">
                                                         {flag}
                                                     </span>
                                                     <span
                                                         className="text-white font-semibold"
-                                                        data-oid="_xxbhea"
+                                                        data-oid="ufgcaye"
                                                     >
                                                         {rating.name}
                                                     </span>
                                                     <span
                                                         className="text-gray-400 ml-1"
-                                                        data-oid="qvcr4tn"
+                                                        data-oid="hg4qcd3"
                                                     >
                                                         {' '}
                                                         - {rating.description || 'N/A'}
@@ -201,34 +201,34 @@ export default function TvShowTitlePage() {
                                     </ul>
                                 </div>
                             ) : (
-                                <p className="text-gray-400 text-sm" data-oid="tnn4uku">
+                                <p className="text-gray-400 text-sm" data-oid=".e:g1ta">
                                     No content ratings available.
                                 </p>
                             )}
                             {/* Action Buttons */}
                             <div
                                 className="flex justify-start landscape:gap-2 mt-4"
-                                data-oid="-.:cblk"
+                                data-oid="3kw:382"
                             >
                                 <Link
                                     href={'#play'}
                                     className="bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 md:px-8 landscape:rounded-3xl rounded-s-2xl flex items-center transition-colors text-sm md:text-base"
-                                    data-oid="kr95utu"
+                                    data-oid="_m_t.80"
                                 >
                                     <svg
                                         className="w-4 h-4 md:w-5 md:h-5 mr-2"
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
-                                        data-oid="y56_5ga"
+                                        data-oid="iu:..iq"
                                     >
-                                        <path d="M4 4l12 6-12 6V4z" data-oid=".-7cwlz" />
+                                        <path d="M4 4l12 6-12 6V4z" data-oid="befo4f5" />
                                     </svg>
                                     Play Now
                                 </Link>
                                 <Link
                                     href={'#'}
                                     className="bg-gray-800/80 hover:bg-gray-700/80 px-4 py-2 md:px-8 landscape:rounded-3xl rounded-e-2xl transition-colors text-sm md:text-base"
-                                    data-oid="aask6sd"
+                                    data-oid="xmstbjw"
                                 >
                                     Add to My List
                                 </Link>
@@ -237,15 +237,15 @@ export default function TvShowTitlePage() {
                         {/* Overview Section */}
                         <div
                             className="bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50"
-                            data-oid="twvwhom"
+                            data-oid="y0enq38"
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-200 mb-3"
-                                data-oid="s3f.i.p"
+                                data-oid="0623:0c"
                             >
                                 Overview
                             </h3>
-                            <p className="text-gray-300 leading-relaxed" data-oid="exdh8pn">
+                            <p className="text-gray-300 leading-relaxed" data-oid="js5:gbd">
                                 {tvshow.translations?.overviewTranslations?.find(
                                     (t: { language: string; overview: string }) =>
                                         t.language === 'eng',
@@ -258,13 +258,13 @@ export default function TvShowTitlePage() {
                         <EpisodesSection
                             fileStructure={fileStructure}
                             tvshow={title}
-                            data-oid="trlojhf"
+                            data-oid="u:gjt0j"
                         />
                     </div>
 
                     {/* Right Column - Cast */}
-                    <div className="lg:col-span-1" data-oid="-c328r.">
-                        <CastSection movie={tvshow} data-oid="p6hxqrq" />
+                    <div className="lg:col-span-1" data-oid="w3k6ytk">
+                        <CastSection movie={tvshow} data-oid="ts5w4is" />
                     </div>
                 </div>
             </div>

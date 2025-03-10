@@ -48,31 +48,31 @@ export default function Page() {
     }, [slides]);
 
     return (
-        <div className="page" data-oid="ch.sdg3">
+        <div className="page" data-oid="cw.1:dv">
             {/* Hero Slideshow */}
-            <div className="relative landscape:h-[100vh] portrait:h-[80vh]" data-oid="hqn:4x0">
+            <div className="relative landscape:h-[100vh] portrait:h-[80vh]" data-oid="y_:wl1s">
                 {/* Loading Skeleton */}
                 <div
                     className={`absolute inset-0 flex items-center justify-center bg-gray-900 transition-opacity duration-1000 ${
                         loading ? 'opacity-100' : 'opacity-0 pointer-events-none'
                     }`}
-                    data-oid="-2:w7k3"
+                    data-oid="l::hd_."
                 >
                     <div
                         className="w-full h-full flex flex-col justify-end bg-gray-800 rounded-lg animate-pulse"
-                        data-oid="n6-k2i1"
+                        data-oid="4mrtdzm"
                     >
                         <div
                             className="w-2/4 h-5 landscape:w-1/4 ml-10 landscape:ml-20 mb-4 bg-gray-700 rounded-lg"
-                            data-oid="xe8lt-i"
+                            data-oid=".at4xd9"
                         ></div>
                         <div
                             className="w-3/4 h-14 landscape:w-2/4 ml-10 landscape:ml-20 mb-4 bg-gray-700 rounded-lg"
-                            data-oid="5aultfi"
+                            data-oid="q0pc.vy"
                         ></div>
                         <div
                             className="w-3/4 h-1/4 landscape:w-2/4 ml-10 landscape:ml-20 mb-20 bg-gray-700 rounded-lg"
-                            data-oid="zepou.t"
+                            data-oid="z0oswi8"
                         ></div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ export default function Page() {
                     className={`absolute inset-0 transition-opacity duration-1000 ${
                         loaded ? 'opacity-100' : 'opacity-0'
                     }`}
-                    data-oid="uz.mhtp"
+                    data-oid="3g:tb06"
                 >
                     {slides.map((slide, index) => (
                         <div
@@ -90,36 +90,36 @@ export default function Page() {
                             className={`absolute inset-0 transition-opacity duration-1000 ${
                                 index === currentSlide ? 'opacity-100' : 'opacity-0'
                             }`}
-                            data-oid="4woww41"
+                            data-oid="n9av4rc"
                         >
-                            <div className="absolute inset-0 bg-black/50 z-10" data-oid="kbvkdme" />
+                            <div className="absolute inset-0 bg-black/50 z-10" data-oid="w1.bp86" />
                             <div
                                 className="w-full h-full bg-center pan-animation transition-transform duration-1000 transform-gpu"
                                 style={{ backgroundImage: `url(${slide.image})` }}
-                                data-oid="t82igp8"
+                                data-oid="oge2g_e"
                             ></div>
                             <div
                                 className="absolute bottom-0 left-0 right-0 z-20 p-10 md:p-20 bg-gradient-to-t from-gray-900"
-                                data-oid="wxk6yyx"
+                                data-oid="r67whkn"
                             >
-                                <div className="container mx-auto" data-oid="4sd-e6x">
+                                <div className="container mx-auto" data-oid="4w:sfq7">
                                     <h1
                                         className="text-4xl md:text-5xl font-sans font-medium mt-2 mb-4"
-                                        data-oid="u8_4-sy"
+                                        data-oid="c1vi563"
                                     >
                                         {slide.title}
                                     </h1>
                                     <span
                                         className="text-purple-400 text-base font-semibold flex flex-wrap gap-2"
-                                        data-oid="qauzuhb"
+                                        data-oid="q7:itw5"
                                     >
                                         {Array.isArray(slide.genre) ? (
                                             slide.genre.map((genre, index) => (
-                                                <span key={index} data-oid="vi:_x28">
+                                                <span key={index} data-oid="awdxz__">
                                                     <Link
                                                         href={`/genre/${encodeURIComponent(genre)}`}
                                                         className="bg-purple-700/50 hover:bg-gray-600/50 text-gray-200 px-3 py-1 rounded-full text-sm transition-colors"
-                                                        data-oid="t0d8h7x"
+                                                        data-oid="i08_kh4"
                                                     >
                                                         {genre}
                                                     </Link>
@@ -129,7 +129,7 @@ export default function Page() {
                                             <Link
                                                 href={`/genre/${encodeURIComponent(slide.genre)}`}
                                                 className="bg-purple-700/50 hover:bg-gray-600/50 text-gray-200 px-3 py-1 rounded-full text-sm transition-colors"
-                                                data-oid="fka3qge"
+                                                data-oid="gy5qx_-"
                                             >
                                                 {slide.genre}
                                             </Link>
@@ -138,13 +138,13 @@ export default function Page() {
 
                                     <p
                                         className="text-gray-300 text-lg font-sans max-w-xl overflow-hidden line-clamp-5"
-                                        data-oid="yjgs9an"
+                                        data-oid="a:-go_r"
                                     >
                                         {slide.description}
                                     </p>
                                     <div
                                         className="flex justify-start landscape:gap-4 mt-8"
-                                        data-oid="a05syev"
+                                        data-oid="7pc69z8"
                                     >
                                         <Link
                                             href={
@@ -153,9 +153,9 @@ export default function Page() {
                                                     : `/watch/tvshow/${slide.title}`
                                             }
                                             className="bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 landscape:py-2 py-2 md:px-8 md:py-3 landscape:rounded-3xl rounded-s-2xl flex flex-row gap-1 items-center transition-colors text-sm md:text-base"
-                                            data-oid="7no3hf3"
+                                            data-oid="9kxi2kg"
                                         >
-                                            <PlayIcon className="size-5" data-oid="a8d24n_" />
+                                            <PlayIcon className="size-5" data-oid="nhshn52" />
                                             Play Now
                                         </Link>
                                         <Link
@@ -165,12 +165,12 @@ export default function Page() {
                                                     : `/tvshow/${slide.title}`
                                             }
                                             className="bg-gray-800/80 hover:bg-gray-700/80 px-4 landscape:py-2 py-2  md:px-8 md:py-3 landscape:rounded-3xl rounded-e-2xl transition-colors text-sm md:text-base flex flex-row gap-1"
-                                            data-oid="51qqotn"
+                                            data-oid="g-l4vns"
                                         >
                                             More Info{' '}
                                             <InformationCircleIcon
                                                 className="size-5"
-                                                data-oid="_bm0usz"
+                                                data-oid="lc1q9kp"
                                             />
                                         </Link>
                                     </div>
@@ -181,7 +181,7 @@ export default function Page() {
                 </div>
             </div>
 
-            <NewContentSection data-oid="v5_ktqn" />
+            <NewContentSection data-oid=":giuhms" />
         </div>
     );
 }

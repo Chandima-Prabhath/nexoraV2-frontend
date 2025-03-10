@@ -36,9 +36,9 @@ interface Trailer {
     url: string;
     language: string;
     runtime: number;
-  }
-  
-  interface Card {
+}
+
+interface Card {
     title: string;
     year: string;
     image: string;
@@ -46,7 +46,7 @@ interface Trailer {
     banner: Artwork[];
     overview: string;
     trailers: Trailer[]; // Now trailers is an array of Trailer objects
-  }
+}
 
 interface TvShowCardProps {
     title: string;
@@ -73,7 +73,7 @@ const BannerImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
                 visible ? 'opacity-100' : 'opacity-0'
             }`}
-            data-oid="ia4kus."
+            data-oid="xtfhlho"
         />
     );
 };
@@ -91,7 +91,6 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
     const slideshowTimer = useRef<NodeJS.Timeout | null>(null);
     const hoverTimer = useRef<NodeJS.Timeout | null>(null);
     const touchTimer = useRef<NodeJS.Timeout | null>(null); // Timer for touch and hold detection
-
 
     // Fetch card data.
     useEffect(() => {
@@ -309,141 +308,141 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
         e.preventDefault();
     };
 
-
     // Render modal via portal when modalStyle is set.
     const modal =
         card && cardRef.current && modalStyle
             ? createPortal(
-                <div
-                    style={modalStyle}
-                    className="bg-gray-800/60 backdrop-blur-md rounded-lg p-2.5 border border-gray-400/50 transition-all flex flex-col justify-between pt-0"
-                    // Keep modal open on hover (desktop).
-                    onMouseEnter={() => setIsHovering(true)}
-                    onMouseLeave={() => setIsHovering(false)}
-                    data-oid="62_r6ny"
-                >
-                    {/* Close button for mobile */}
-                    <button
-                        onClick={() => setShowModal(false)}
-                        className="absolute top-0 right-0 text-white bg-gray-800 hover:bg-gradient-to-r hover:from-violet-500/80 hover:to-purple-400/80 px-3 py-2 rounded-md z-10 border border-gray-400/50"
-                        data-oid="2xa9juf"
-                    >
-                        <XMarkIcon className="size-6" data-oid=".o05-n6" />
-                    </button>
-                    {/* Episodes Count Bubble */}
-                    {episodesCount !== null && (
-                        <div
-                            className="absolute top-0 left-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md rounded-b-none rounded-r-none shadow-lg"
-                            data-oid="8:a6w2r"
-                        >
-                            <p className="text-gray-700 text-sm" data-oid="h5_kec8">
-                                {episodesCount}
-                            </p>
-                            <p className="text-xs" data-oid="a-q6gbi">
-                                Ep{episodesCount > 1 ? 's' : ''}
-                            </p>
-                        </div>
-                    )}
-                    {/* Title and Year */}
-                    <div className="flex flex-col w-full" data-oid="ja4_4rt">
-                        <h3
-                            className="pl-8 h-11 lg:pb:2 pt-2 bg-gray-700/40 backdrop-blur-md text-md sm:text-lg md:text-xl font-semibold text-white text-clip line-clamp-1"
-                            data-oid="_m52qkf"
-                        >
-                            {card?.title || 'Loading...'}
-                        </h3>
+                  <div
+                      style={modalStyle}
+                      className="bg-gray-800/60 backdrop-blur-md rounded-lg p-2.5 border border-gray-400/50 transition-all flex flex-col justify-between pt-0"
+                      // Keep modal open on hover (desktop).
+                      onMouseEnter={() => setIsHovering(true)}
+                      onMouseLeave={() => setIsHovering(false)}
+                      data-oid="7eilx1z"
+                  >
+                      {/* Close button for mobile */}
+                      <button
+                          onClick={() => setShowModal(false)}
+                          className="absolute top-0 right-0 text-white bg-gray-800 hover:bg-gradient-to-r hover:from-violet-500/80 hover:to-purple-400/80 px-3 py-2 rounded-md z-10 border border-gray-400/50"
+                          data-oid="kx31_ub"
+                      >
+                          <XMarkIcon className="size-6" data-oid="ozxrza0" />
+                      </button>
+                      {/* Episodes Count Bubble */}
+                      {episodesCount !== null && (
+                          <div
+                              className="absolute top-0 left-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md rounded-b-none rounded-r-none shadow-lg"
+                              data-oid="6t.2xue"
+                          >
+                              <p className="text-gray-700 text-sm" data-oid=":3it4o8">
+                                  {episodesCount}
+                              </p>
+                              <p className="text-xs" data-oid="0b-:.s3">
+                                  Ep{episodesCount > 1 ? 's' : ''}
+                              </p>
+                          </div>
+                      )}
+                      {/* Title and Year */}
+                      <div className="flex flex-col w-full" data-oid="nz2hkva">
+                          <h3
+                              className="pl-8 h-11 lg:pb:2 pt-2 bg-gray-700/40 backdrop-blur-md text-md sm:text-lg md:text-xl font-semibold text-white text-clip line-clamp-1"
+                              data-oid="kigyton"
+                          >
+                              {card?.title || 'Loading...'}
+                          </h3>
 
-                        <div
-                            className="flex pb-2 items-center space-x-2 mt-1 text-sm sm:text-md"
-                            data-oid="gfad6kg"
-                        >
-                            <span
-                                className="text-yellow-400 flex gap-1 items-center"
-                                data-oid="zw-h.fz"
-                            >
-                                <StarIcon className="size-3" data-oid=":y4ilwk" /> 0
-                            </span>
-                            <span className="text-gray-300" data-oid="b-1izto">
-                                • {card?.year || '----'}
-                            </span>
-                            <span className="text-purple-300 text-sm" data-oid="r5f0nac">
-                                •
-                            </span>
-                            <span
-                                className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm"
-                                data-oid="7ht_3pu"
-                            >
-                                TV Series
-                            </span>
-                        </div>
-                    </div>
-                    {/* Conditionally render TrailersComp if trailers exist, otherwise show banner slideshow */}
-            {card?.trailers && card.trailers.length > 0 ? (
-              <TrailersComp trailers={card.trailers} />
-            ) : (
-              card.banner && (
-                <div
-                  className="relative w-full h-56 overflow-hidden rounded-md mb-4"
-                  data-oid="h__x1wg"
-                >
-                  <BannerImage
-                    key={bannerIndex}
-                    src={
-                      card.banner[bannerIndex]?.thumbnail ||
-                      `https://placehold.co/640x360?text=Preview+Not+Available`
-                    }
-                    alt="Banner Preview"
-                    data-oid="9kczgk8"
-                  />
-                  {card.banner.length > 1 && (
-                    <>
-                      <button
-                        onClick={handlePrev}
-                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                        data-oid="z151qsy"
+                          <div
+                              className="flex pb-2 items-center space-x-2 mt-1 text-sm sm:text-md"
+                              data-oid="s4.0547"
+                          >
+                              <span
+                                  className="text-yellow-400 flex gap-1 items-center"
+                                  data-oid="ccc85j0"
+                              >
+                                  <StarIcon className="size-3" data-oid="3u-sep_" /> 0
+                              </span>
+                              <span className="text-gray-300" data-oid="u4gz78y">
+                                  • {card?.year || '----'}
+                              </span>
+                              <span className="text-purple-300 text-sm" data-oid="u1zpo-6">
+                                  •
+                              </span>
+                              <span
+                                  className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm"
+                                  data-oid="e5qm7k:"
+                              >
+                                  TV Series
+                              </span>
+                          </div>
+                      </div>
+                      {/* Conditionally render TrailersComp if trailers exist, otherwise show banner slideshow */}
+                      {card?.trailers && card.trailers.length > 0 ? (
+                          <TrailersComp trailers={card.trailers} data-oid="s4lp0xx" />
+                      ) : (
+                          card.banner && (
+                              <div
+                                  className="relative w-full h-56 overflow-hidden rounded-md mb-4"
+                                  data-oid=":lwwujl"
+                              >
+                                  <BannerImage
+                                      key={bannerIndex}
+                                      src={
+                                          card.banner[bannerIndex]?.thumbnail ||
+                                          `https://placehold.co/640x360?text=Preview+Not+Available`
+                                      }
+                                      alt="Banner Preview"
+                                      data-oid="ew76rr4"
+                                  />
+
+                                  {card.banner.length > 1 && (
+                                      <>
+                                          <button
+                                              onClick={handlePrev}
+                                              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
+                                              data-oid="e1byd3x"
+                                          >
+                                              <ArrowLeftCircleIcon
+                                                  className="size-10 text-violet-400"
+                                                  data-oid="11z:uub"
+                                              />
+                                          </button>
+                                          <button
+                                              onClick={handleNext}
+                                              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
+                                              data-oid="vlmc2.7"
+                                          >
+                                              <ArrowRightCircleIcon
+                                                  className="size-10 text-violet-400"
+                                                  data-oid="wk_q3tn"
+                                              />
+                                          </button>
+                                      </>
+                                  )}
+                              </div>
+                          )
+                      )}
+                      {/* Overview text */}
+                      <div
+                          className="text-gray-300 text-base sm:text-lg overflow-hidden line-clamp-4 transition-all duration-300 mb-4"
+                          data-oid="x0lh765"
                       >
-                        <ArrowLeftCircleIcon
-                          className="size-10 text-violet-400"
-                          data-oid="fpnh2w9"
-                        />
-                      </button>
-                      <button
-                        onClick={handleNext}
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                        data-oid="h.h66si"
-                      >
-                        <ArrowRightCircleIcon
-                          className="size-10 text-violet-400"
-                          data-oid="l56nlzc"
-                        />
-                      </button>
-                    </>
-                  )}
-                </div>
+                          {card.overview}
+                      </div>
+                      {/* View Details Button */}
+                      <div className="flex flex-row" data-oid="4mw8_lt">
+                          <Link href={`/tvshow/${title}`} data-oid="8r6-_jd">
+                              <button
+                                  className="text-white bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 rounded-3xl flex items-center text-sm md:text-base transition-all duration-750 ease-in-out gap-0.5"
+                                  data-oid="uhnt09p"
+                              >
+                                  View Details
+                                  <ChevronRightIcon className="size-4" data-oid="wncb4k_" />
+                              </button>
+                          </Link>
+                      </div>
+                  </div>,
+                  document.body,
               )
-            )}
-                    {/* Overview text */}
-                    <div
-                        className="text-gray-300 text-base sm:text-lg overflow-hidden line-clamp-4 transition-all duration-300 mb-4"
-                        data-oid="k_8v6dq"
-                    >
-                        {card.overview}
-                    </div>
-                    {/* View Details Button */}
-                    <div className="flex flex-row" data-oid="pgts_xn">
-                        <Link href={`/tvshow/${title}`} data-oid="bg-:bsv">
-                            <button
-                                className="text-white bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 rounded-3xl flex items-center text-sm md:text-base transition-all duration-750 ease-in-out gap-0.5"
-                                data-oid="sl6wajo"
-                            >
-                                View Details
-                                <ChevronRightIcon className="size-4" data-oid="cnht:jj" />
-                            </button>
-                        </Link>
-                    </div>
-                </div>,
-                document.body,
-            )
             : null;
 
     return (
@@ -454,27 +453,27 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                 onMouseEnter={handleCardMouseEnter}
                 onMouseLeave={handleCardMouseLeave}
                 onClick={handleCardClick}
-                data-oid="ud-dhj."
                 onContextMenu={handleContextMenu} // Prevent default context menu
-                onTouchStart={handleTouchStart}     // Detect touch start
-                onTouchEnd={handleTouchEnd}         // Detect touch end
-                onTouchCancel={handleTouchCancel}    // Detect touch cancel
+                onTouchStart={handleTouchStart} // Detect touch start
+                onTouchEnd={handleTouchEnd} // Detect touch end
+                onTouchCancel={handleTouchCancel} // Detect touch cancel
+                data-oid="-z8952k"
             >
                 <div
                     className="rounded-lg border border-gray-400/50 overflow-hidden relative transition-transform duration-300 w-[140px] sm:w-[150px] md:w-[180px] lg:w-[180px] xl:w-[200px]
                                                      h-[210px] sm:h-[220px] md:h-[250px] lg:h-[280px] xl:h-[300px]"
-                    data-oid="ukn:8pp"
+                    data-oid="3vyn_4l"
                 >
                     {/* Episodes Count Bubble */}
                     {episodesCount !== null && (
                         <div
                             className="absolute top-0 right-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md shadow-lg"
-                            data-oid="f3o:paw"
+                            data-oid="-_4dmsd"
                         >
-                            <p className="text-gray-700 text-sm" data-oid="xg012zc">
+                            <p className="text-gray-700 text-sm" data-oid=".pj-hyd">
                                 {episodesCount}
                             </p>
-                            <p className="text-xs" data-oid="zfm-c-2">
+                            <p className="text-xs" data-oid="5-lcbyc">
                                 Ep{episodesCount > 1 ? 's' : ''}
                             </p>
                         </div>
@@ -483,7 +482,7 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                     {!imageLoaded && (
                         <div
                             className="absolute inset-0 bg-gray-700 animate-pulse rounded-lg"
-                            data-oid="8n4dvf0"
+                            data-oid="frm9rvn"
                         />
                     )}
                     {/* Card Image (fixed once randomly selected) */}
@@ -495,32 +494,32 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                                 imageLoaded ? 'opacity-100' : 'opacity-0'
                             }`}
                             onLoad={() => setImageLoaded(true)}
-                            data-oid="5v6i7xs"
+                            data-oid="0hc8wq2"
                         />
                     )}
                     {/* Overlay */}
                     <div
                         className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                        data-oid="o8k0fd0"
+                        data-oid="tb81i--"
                     >
-                        <div className="absolute bottom-0 p-4 w-full" data-oid="tuk:gjp">
+                        <div className="absolute bottom-0 p-4 w-full" data-oid="f46b6qp">
                             <h3
                                 className="text-sm sm:text-base md:text-lg font-semibold text-white"
-                                data-oid="ang88pi"
+                                data-oid="026hkyf"
                             >
                                 {card?.title || 'Loading...'}
                             </h3>
                             <div
                                 className="flex items-center space-x-2 mt-1 text-xs sm:text-sm"
-                                data-oid="xc7:386"
+                                data-oid="1o._m6x"
                             >
                                 <span
                                     className="text-yellow-400 flex gap-1 items-center"
-                                    data-oid="vbg52ma"
+                                    data-oid="z-:ph-:"
                                 >
-                                    <StarIcon className="size-3" data-oid="_b_pzrl" /> 0
+                                    <StarIcon className="size-3" data-oid="8n:436:" /> 0
                                 </span>
-                                <span className="text-gray-300" data-oid="c8.qvjj">
+                                <span className="text-gray-300" data-oid="-lsbeql">
                                     • {card?.year || '----'}
                                 </span>
                             </div>

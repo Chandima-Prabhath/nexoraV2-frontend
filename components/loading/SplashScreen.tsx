@@ -39,49 +39,49 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
     }, []);
 
     return (
-        <LoadingContext.Provider value={{ loading, setLoading }} data-oid="k5me0da">
-            <AnimatePresence mode="wait" data-oid="u49096x">
+        <LoadingContext.Provider value={{ loading, setLoading }} data-oid="prom4c6">
+            <AnimatePresence mode="wait" data-oid="xrtjzv1">
                 {loading && (
                     <motion.div
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.6, ease: 'easeInOut' }}
                         className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900"
-                        data-oid="_rjul_i"
+                        data-oid="poezl5."
                     >
-                        <div className="relative flex flex-col items-center" data-oid="zmc8scv">
+                        <div className="relative flex flex-col items-center" data-oid="sewg053">
                             {/* Logo Animation */}
                             <motion.div
                                 initial={{ scale: 0.5, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: 'easeOut' }}
                                 className="mb-8"
-                                data-oid="oik_h9r"
+                                data-oid="4w:y6dd"
                             >
-                                <div className="w-44 h-44 relative " data-oid="3tbwztk">
+                                <div className="w-44 h-44 relative " data-oid="bx3peoh">
                                     <div
                                         className="animate-pulse absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl"
-                                        data-oid="nswqfs6"
+                                        data-oid="d5wagp-"
                                     />
 
                                     {/* Inner Background */}
                                     <div
                                         className="animate-pulse absolute inset-1 bg-gray-800 rounded-xl"
-                                        data-oid="p7wrz0e"
+                                        data-oid="m64lxyl"
                                     />
 
                                     {/* Text */}
                                     <div
                                         className="absolute inset-0 flex-col items-center text-center flex justify-items-center justify-center"
-                                        data-oid="8w:62dp"
+                                        data-oid=":p9.-rz"
                                     >
                                         <span
                                             className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg"
-                                            data-oid="a3y25ex"
+                                            data-oid="9e:dt9o"
                                         >
                                             NEXORA
                                         </span>
-                                        <p className="text-gray-300 font-mono" data-oid="l5hfcjt">
+                                        <p className="text-gray-300 font-mono" data-oid="qjnlja:">
                                             {WEB_VERSION}
                                         </p>
                                     </div>
@@ -94,7 +94,7 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
                                 animate={{ width: '150px' }}
                                 transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
                                 className="animate-pulse h-1 bg-gradient-to-r m from-purple-500 to-pink-500 rounded-full"
-                                data-oid="ve7kdif"
+                                data-oid="45gpqq2"
                             />
 
                             {/* Loading Text */}
@@ -103,7 +103,7 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5, ease: 'easeOut' }}
                                 className="mt-6 text-gray-300 text-sm font-mono tracking-wide"
-                                data-oid="r.-e_gs"
+                                data-oid="63-ywb0"
                             >
                                 {message}
                             </motion.p>

@@ -31,22 +31,30 @@ interface ProgressData {
 }
 
 const PlayerSpinner: React.FC<{ loading: boolean }> = ({ loading }) => (
-    <AnimatePresence>
+    <AnimatePresence data-oid="x:4bfwy">
         {loading && (
             <motion.div
                 initial={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
                 className="absolute inset-0 z-[500] flex items-center justify-center bg-gray-900/50"
+                data-oid="8gs2vns"
             >
-                <div className="relative flex flex-col items-center">
+                <div className="relative flex flex-col items-center" data-oid="j01ywl8">
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
                         className="relative w-16 h-16"
+                        data-oid="r9nnrps"
                     >
-                        <div className="absolute inset-0 border-4 border-transparent border-t-purple-500 border-l-purple-500 rounded-full"></div>
-                        <div className="absolute inset-0 w-full h-full animate-ping rounded-full bg-purple-500 opacity-30"></div>
+                        <div
+                            className="absolute inset-0 border-4 border-transparent border-t-purple-500 border-l-purple-500 rounded-full"
+                            data-oid="eodd5-e"
+                        ></div>
+                        <div
+                            className="absolute inset-0 w-full h-full animate-ping rounded-full bg-purple-500 opacity-30"
+                            data-oid="pkrhyh-"
+                        ></div>
                     </motion.div>
                 </div>
             </motion.div>
@@ -346,7 +354,7 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
             className="z-30 absolute flex w-full h-full"
             ref={containerRef}
             onMouseMove={resetInactivityTimer}
-            data-oid="r0v5aoy"
+            data-oid="o:bd6f5"
         >
             {videoUrl ? (
                 <>
@@ -364,12 +372,12 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                         onCanPlay={() => setLocalSpinnerLoading(false)}
                         onPlaying={() => setLocalSpinnerLoading(false)}
                         autoPlay
-                        data-oid="b1om8sp"
+                        data-oid="2pffk0h"
                     >
                         <source
                             src={videoBlobUrl || videoUrl}
                             type="video/webm"
-                            data-oid="fkv995l"
+                            data-oid="dw2i1qj"
                         />
                     </video>
 
@@ -377,18 +385,18 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                         <div
                             className="absolute z-50 pointer-events-none"
                             style={{ top: '80px', left: '20px' }}
-                            data-oid="ut68anl"
+                            data-oid="tvfs0h3"
                         >
                             <div
                                 className="px-6 py-3 bg-black bg-opacity-70 rounded-lg border border-white text-white text-3xl font-bold animate-fade-out"
-                                data-oid="kmmj3.7"
+                                data-oid="4cu5lza"
                             >
                                 {contentRatings[0].country ? `[${contentRatings[0].country}] ` : ''}
                                 {contentRatings[0].name}
                             </div>
                         </div>
                     )}
-                     <PlayerSpinner loading={localSpinnerLoading} />
+                    <PlayerSpinner loading={localSpinnerLoading} data-oid="m.kb7bc" />
 
                     {/* Controls Overlay */}
                     <div
@@ -397,23 +405,23 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                                 ? 'opacity-100 pointer-events-auto'
                                 : 'opacity-0 pointer-events-none'
                         }`}
-                        data-oid="ie8a4tx"
+                        data-oid="297_k.l"
                     >
                         <div
                             className="flex items-center justify-between p-6 bg-gradient-to-b from-black/90 to-transparent"
-                            data-oid="sbitr2x"
+                            data-oid="4b2c.q3"
                         >
-                            <div className="flex flex-col" data-oid="2izgux-">
+                            <div className="flex flex-col" data-oid="bw7vaz6">
                                 <h1
                                     className="text-white text-3xl font-extrabold"
-                                    data-oid="3jf5av-"
+                                    data-oid="i-dc.p8"
                                 >
                                     {videoTitle || 'Video Player'}
                                 </h1>
                                 {contentRatings.length > 0 && (
                                     <div
                                         className="mt-2 inline-block bg-gray-700 text-white text-sm px-3 py-1 rounded-md"
-                                        data-oid="hih_w29"
+                                        data-oid="-ebtddv"
                                     >
                                         {contentRatings[0].country
                                             ? `[${contentRatings[0].country}] `
@@ -426,35 +434,35 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                                 <button
                                     onClick={handleClose}
                                     className="text-white hover:text-red-400 transition-colors"
-                                    data-oid="vw:rhzp"
+                                    data-oid=":dj43an"
                                 >
-                                    <XCircleIcon className="size-12" data-oid="rr-p16m" />
+                                    <XCircleIcon className="size-12" data-oid="bjbbm-k" />
                                 </button>
                             )}
                         </div>
                         <div
                             className="flex flex-col p-6 bg-gradient-to-t from-black/90 to-transparent"
-                            data-oid="oqn0s0f"
+                            data-oid="wdhi394"
                         >
                             <div
                                 className="flex items-center justify-between mb-4"
-                                data-oid="qo0gq8w"
+                                data-oid="alm3o8i"
                             >
-                                <span className="text-white text-sm" data-oid="h9bzg-k">
+                                <span className="text-white text-sm" data-oid="onbte61">
                                     {formatTime(currentTime)}
                                 </span>
                                 {/* Custom Progress Bar */}
-                                <div className="relative w-full mx-4" data-oid="is-s2q_">
-                                    <div className="h-2 rounded bg-gray-700" data-oid="jm10y2t">
+                                <div className="relative w-full mx-4" data-oid="s8-r3tx">
+                                    <div className="h-2 rounded bg-gray-700" data-oid="32ihpw2">
                                         <div
                                             className="h-2 rounded bg-purple-300"
                                             style={{ width: `${bufferedPercent}%` }}
-                                            data-oid="t4-00_s"
+                                            data-oid="w18ajo2"
                                         ></div>
                                         <div
                                             className="h-2 rounded bg-purple-700 absolute top-0 left-0"
                                             style={{ width: `${playedPercent}%` }}
-                                            data-oid="uq6zt6h"
+                                            data-oid="u.e3kd1"
                                         ></div>
                                     </div>
                                     <input
@@ -470,40 +478,40 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                                         onTouchStart={handleSeekStart}
                                         onChange={handleSeekEnd}
                                         className="absolute top-0 left-0 w-full h-2 opacity-0 cursor-pointer"
-                                        data-oid="qlau95d"
+                                        data-oid="zjhgzi5"
                                     />
                                 </div>
-                                <span className="text-white text-sm" data-oid="swiz6uh">
+                                <span className="text-white text-sm" data-oid="bxgcn5x">
                                     {formatTime(duration)}
                                 </span>
                             </div>
-                            <div className="flex items-center justify-between" data-oid="r:rpbrz">
-                                <div className="flex items-center space-x-6" data-oid="milzceh">
+                            <div className="flex items-center justify-between" data-oid="gwp-d:p">
+                                <div className="flex items-center space-x-6" data-oid="1zf.2n4">
                                     <button
                                         onClick={togglePlay}
                                         className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="9xeiulf"
+                                        data-oid="2quxymj"
                                     >
                                         {isPlaying ? (
-                                            <PauseIcon className="size-12" data-oid="3_2us3v" />
+                                            <PauseIcon className="size-12" data-oid="xiqtgqp" />
                                         ) : (
-                                            <PlayIcon className="size-12" data-oid="8hyyjo_" />
+                                            <PlayIcon className="size-12" data-oid="awnkmo_" />
                                         )}
                                     </button>
                                     <button
                                         onClick={toggleMute}
                                         className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="rf1ura4"
+                                        data-oid="mfb._qq"
                                     >
                                         {isMuted ? (
                                             <SpeakerXMarkIcon
                                                 className="size-12"
-                                                data-oid="f6mx23l"
+                                                data-oid="g:24okc"
                                             />
                                         ) : (
                                             <SpeakerWaveIcon
                                                 className="size-12"
-                                                data-oid="y2bqchw"
+                                                data-oid="963l.0k"
                                             />
                                         )}
                                     </button>
@@ -515,23 +523,23 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                                         value={volume}
                                         onChange={handleVolumeChange}
                                         className="w-24 accent-purple-500"
-                                        data-oid="4db1hvt"
+                                        data-oid="iwr63g1"
                                     />
                                 </div>
                                 <button
                                     onClick={toggleFullscreen}
                                     className="text-white hover:text-purple-300 transition-colors"
-                                    data-oid="eqb0vgb"
+                                    data-oid="r5i362d"
                                 >
                                     {!isFullscreen ? (
                                         <ArrowsPointingOutIcon
                                             className="size-12"
-                                            data-oid="oyn8yc6"
+                                            data-oid="7bh0u:j"
                                         />
                                     ) : (
                                         <ArrowsPointingInIcon
                                             className="size-12"
-                                            data-oid="t7zqpg9"
+                                            data-oid="13faqb2"
                                         />
                                     )}
                                 </button>
@@ -543,32 +551,32 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                 // Link Fetcher UI while waiting for video URL
                 <div
                     className="p-6 bg-gray-800 text-gray-200 rounded-lg shadow-md"
-                    data-oid="x:w-azo"
+                    data-oid="f0p.hcw"
                 >
-                    <h2 className="text-xl font-semibold mb-4" data-oid="gsa4riq">
+                    <h2 className="text-xl font-semibold mb-4" data-oid="q34.6pe">
                         Fetching Video Link
                     </h2>
                     {progress ? (
-                        <div className="space-y-2" data-oid="d0ty9:0">
-                            <p className="text-sm" data-oid="bacm-s6">
+                        <div className="space-y-2" data-oid="1xqn6_u">
+                            <p className="text-sm" data-oid="e2o1bt0">
                                 Status: {progress.status}
                             </p>
-                            <p className="text-sm" data-oid="miy4vsg">
+                            <p className="text-sm" data-oid="-02oxgo">
                                 Progress: {progress.progress.toFixed(2)}%
                             </p>
-                            <p className="text-sm" data-oid="_0i74dp">
+                            <p className="text-sm" data-oid="47ae4c.">
                                 Downloaded: {progress.downloaded} / {progress.total}
                             </p>
                         </div>
                     ) : (
-                        <p className="text-sm" data-oid="05y0gze">
+                        <p className="text-sm" data-oid="6goop-d">
                             Initializing link fetching...
                         </p>
                     )}
                 </div>
             )}
 
-            <style jsx data-oid="45q3vmn">{`
+            <style jsx data-oid="m_kg1ka">{`
                 @keyframes fade-out {
                     0% {
                         opacity: 1;

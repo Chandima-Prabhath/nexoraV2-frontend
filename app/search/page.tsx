@@ -182,22 +182,25 @@ export default function SearchPage() {
     const flattenedEpisodes = results?.episodes ?? [];
 
     return (
-        <div className="page min-h-screen pt-20 pb-4" data-oid="c30dpdf">
-            <div className="container mx-auto portrait:px-3 px-4" data-oid="qc8wc5o">
+        <div className="page min-h-screen pt-20 pb-4" data-oid="y3mh:is">
+            <div className="container mx-auto portrait:px-3 px-4" data-oid="er3udig">
                 {/* Header Section */}
-                <div className="mb-8 space-y-2" data-oid="l_h1wg-">
-                    <h2 className="text-4xl font-bold text-white" data-oid="q5f:fz6">
+                <div className="mb-8 space-y-2" data-oid="achl:z_">
+                    <h2 className="text-4xl font-bold text-white" data-oid="d.51ihv">
                         Search
                     </h2>
-                    <p className="text-gray-400 max-w-3xl" data-oid="087lc-o">
+                    <p className="text-gray-400 max-w-3xl" data-oid="e94crrc">
                         Search for movies, TV shows, and episodes.
                     </p>
                 </div>
                 {/* Search + Filters */}
-                <form onSubmit={handleSubmit} className="mb-8">
-                    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <form onSubmit={handleSubmit} className="mb-8" data-oid=".rrf1d.">
+                    <div
+                        className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+                        data-oid="d-y4gnd"
+                    >
                         {/* Search Input */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col" data-oid="p4g-9-t">
                             <input
                                 id="search"
                                 type="text"
@@ -206,11 +209,12 @@ export default function SearchPage() {
                                 placeholder="Type to search..."
                                 className="p-2 w-72 rounded border border-gray-700 bg-[#1E1E1E] text-white 
                          focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                data-oid="tjxeb4i"
                             />
                         </div>
 
                         {/* Filter Pills */}
-                        <div className="flex flex-wrap gap-2 items-center">
+                        <div className="flex flex-wrap gap-2 items-center" data-oid="593efoz">
                             {['films', 'series', 'episodes'].map((type) => {
                                 const isActive = selectedTypes.includes(type);
                                 // Make the label more user-friendly
@@ -229,6 +233,7 @@ export default function SearchPage() {
                                         className={`px-4 py-1 rounded-full transition-colors 
                     ${isActive ? 'bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white' : 'bg-gray-700 text-gray-300'}
                     hover:bg-gray-600`}
+                                        data-oid="61gvgms"
                                     >
                                         {label}
                                     </button>
@@ -239,38 +244,60 @@ export default function SearchPage() {
                 </form>
 
                 {/* Error message */}
-                {error && <p className="text-red-500 mb-4">{error}</p>}
+                {error && (
+                    <p className="text-red-500 mb-4" data-oid="s40z2fc">
+                        {error}
+                    </p>
+                )}
 
                 {/* Results */}
                 {results && (
-                    <div className="mt-4 space-y-8">
+                    <div className="mt-4 space-y-8" data-oid="u.ii6-6">
                         {/* Movies Section */}
                         {selectedTypes.includes('films') && results.films?.length > 0 && (
-                            <ScrollSection title="Movies" link="/browse/movies">
+                            <ScrollSection title="Movies" link="/browse/movies" data-oid=".9r6qav">
                                 {results.films.map((film, index) => (
-                                    <MovieCard key={index} title={film.replace('films/', '')} />
+                                    <MovieCard
+                                        key={index}
+                                        title={film.replace('films/', '')}
+                                        data-oid="6_1ss:m"
+                                    />
                                 ))}
                             </ScrollSection>
                         )}
 
                         {/* TV Shows Section */}
                         {selectedTypes.includes('series') && results.series?.length > 0 && (
-                            <ScrollSection title="TV Shows" link="/browse/tvshows">
+                            <ScrollSection
+                                title="TV Shows"
+                                link="/browse/tvshows"
+                                data-oid="po2joio"
+                            >
                                 {results.series.map((serie, index) => (
-                                    <TvShowCard key={index} title={serie} episodesCount={null} />
+                                    <TvShowCard
+                                        key={index}
+                                        title={serie}
+                                        episodesCount={null}
+                                        data-oid="y2n_hk2"
+                                    />
                                 ))}
                             </ScrollSection>
                         )}
 
                         {/* Episodes Section (flattened, with metadata) */}
                         {selectedTypes.includes('episodes') && flattenedEpisodes.length > 0 && (
-                            <ScrollSection title="Episodes" link="/browse/tvshows">
+                            <ScrollSection
+                                title="Episodes"
+                                link="/browse/tvshows"
+                                data-oid="js.v_oi"
+                            >
                                 {flattenedEpisodes.map((episode) => (
                                     <Link
                                         href={`/watch/tvshow/${episode.series}/${episode.season}/${episode.title}`}
                                         key={episode.path}
                                         className="w-[160px] flex-shrink-0 rounded-md bg-[#1E1E1E] border border-gray-700
                                p-2 flex flex-col text-center"
+                                        data-oid="cdhv-_5"
                                     >
                                         {/* If you want to show the metadata image */}
                                         {episode.metadata?.image && (
@@ -278,13 +305,20 @@ export default function SearchPage() {
                                                 src={`https://artworks.thetvdb.com${episode.metadata.image}`}
                                                 alt={episode.metadata.name || episode.title}
                                                 className="h-[90px] w-full object-contain rounded mb-2"
+                                                data-oid="bl:55a:"
                                             />
                                         )}
-                                        <h4 className="text-sm font-semibold line-clamp-2 mb-1">
+                                        <h4
+                                            className="text-sm font-semibold line-clamp-2 mb-1"
+                                            data-oid="talmeoo"
+                                        >
                                             {episode.metadata?.name ?? episode.title}
                                         </h4>
                                         {/* Display short overview, or the local series-season text */}
-                                        <p className="text-xs text-gray-300 line-clamp-3">
+                                        <p
+                                            className="text-xs text-gray-300 line-clamp-3"
+                                            data-oid="u5o37xw"
+                                        >
                                             {episode.metadata?.overview
                                                 ? episode.metadata.overview
                                                 : `${episode.series} - ${episode.season}`}
