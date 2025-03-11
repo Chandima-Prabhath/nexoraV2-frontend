@@ -73,7 +73,6 @@ const BannerImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
                 visible ? 'opacity-100' : 'opacity-0'
             }`}
-            data-oid=".ir9s73"
         />
     );
 };
@@ -318,72 +317,44 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                       // Keep modal open on hover (desktop).
                       onMouseEnter={() => setIsHovering(true)}
                       onMouseLeave={() => setIsHovering(false)}
-                      data-oid="66nihwu"
                   >
                       {/* Close button for mobile */}
                       <button
                           onClick={() => setShowModal(false)}
                           className="absolute top-0 right-0 text-white bg-gray-800 hover:bg-gradient-to-r hover:from-violet-500/80 hover:to-purple-400/80 px-3 py-2 rounded-md z-10 border border-gray-400/50"
-                          data-oid="d7h9a5:"
                       >
-                          <XMarkIcon className="size-6" data-oid="4s6vjgi" />
+                          <XMarkIcon className="size-6" />
                       </button>
                       {/* Episodes Count Bubble */}
                       {episodesCount !== null && (
-                          <div
-                              className="absolute top-0 left-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md rounded-b-none rounded-r-none shadow-lg"
-                              data-oid="ot4-80i"
-                          >
-                              <p className="text-gray-700 text-sm" data-oid="5u1r9sx">
-                                  {episodesCount}
-                              </p>
-                              <p className="text-xs" data-oid=".nzbx9i">
-                                  Ep{episodesCount > 1 ? 's' : ''}
-                              </p>
+                          <div className="absolute top-0 left-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md rounded-b-none rounded-r-none shadow-lg">
+                              <p className="text-gray-700 text-sm">{episodesCount}</p>
+                              <p className="text-xs">Ep{episodesCount > 1 ? 's' : ''}</p>
                           </div>
                       )}
                       {/* Title and Year */}
-                      <div className="flex flex-col w-full" data-oid="sk6j00z">
-                          <h3
-                              className="pl-8 h-11 lg:pb:2 pt-2 bg-gray-700/40 backdrop-blur-md text-md sm:text-lg md:text-xl font-semibold text-white text-clip line-clamp-1"
-                              data-oid="lrkapc-"
-                          >
+                      <div className="flex flex-col w-full">
+                          <h3 className="pl-8 h-11 lg:pb:2 pt-2 bg-gray-700/40 backdrop-blur-md text-md sm:text-lg md:text-xl font-semibold text-white text-clip line-clamp-1">
                               {card?.title || 'Loading...'}
                           </h3>
 
-                          <div
-                              className="flex pb-2 items-center space-x-2 mt-1 text-sm sm:text-md"
-                              data-oid="9_i:.os"
-                          >
-                              <span
-                                  className="text-yellow-400 flex gap-1 items-center"
-                                  data-oid="._udtgh"
-                              >
-                                  <StarIcon className="size-3" data-oid="uwz9aef" /> 0
+                          <div className="flex pb-2 items-center space-x-2 mt-1 text-sm sm:text-md">
+                              <span className="text-yellow-400 flex gap-1 items-center">
+                                  <StarIcon className="size-3" /> 0
                               </span>
-                              <span className="text-gray-300" data-oid="kr.5075">
-                                  • {card?.year || '----'}
-                              </span>
-                              <span className="text-purple-300 text-sm" data-oid="vu4yk04">
-                                  •
-                              </span>
-                              <span
-                                  className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm"
-                                  data-oid="c4854i."
-                              >
+                              <span className="text-gray-300">• {card?.year || '----'}</span>
+                              <span className="text-purple-300 text-sm">•</span>
+                              <span className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-sm">
                                   TV Series
                               </span>
                           </div>
                       </div>
                       {/* Conditionally render TrailersComp if trailers exist, otherwise show banner slideshow */}
                       {card?.trailers && card.trailers.length > 0 ? (
-                          <TrailersComp trailers={card.trailers} data-oid="fakt11:" />
+                          <TrailersComp trailers={card.trailers} />
                       ) : (
                           card.banner && (
-                              <div
-                                  className="relative w-full h-56 overflow-hidden rounded-md mb-4"
-                                  data-oid="butmfaa"
-                              >
+                              <div className="relative w-full h-56 overflow-hidden rounded-md mb-4">
                                   <BannerImage
                                       key={bannerIndex}
                                       src={
@@ -391,7 +362,6 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                                           `https://placehold.co/640x360?text=Preview+Not+Available`
                                       }
                                       alt="Banner Preview"
-                                      data-oid="-341iff"
                                   />
 
                                   {card.banner.length > 1 && (
@@ -399,22 +369,14 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                                           <button
                                               onClick={handlePrev}
                                               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                                              data-oid="hny.9p0"
                                           >
-                                              <ArrowLeftCircleIcon
-                                                  className="size-10 text-violet-400"
-                                                  data-oid="qnq57gh"
-                                              />
+                                              <ArrowLeftCircleIcon className="size-10 text-violet-400" />
                                           </button>
                                           <button
                                               onClick={handleNext}
                                               className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900/90 text-white rounded-full"
-                                              data-oid="3smn5ek"
                                           >
-                                              <ArrowRightCircleIcon
-                                                  className="size-10 text-violet-400"
-                                                  data-oid="ymxd3ip"
-                                              />
+                                              <ArrowRightCircleIcon className="size-10 text-violet-400" />
                                           </button>
                                       </>
                                   )}
@@ -422,21 +384,15 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                           )
                       )}
                       {/* Overview text */}
-                      <div
-                          className="text-gray-300 text-base sm:text-lg overflow-hidden line-clamp-4 transition-all duration-300 mb-4"
-                          data-oid="5rmert1"
-                      >
+                      <div className="text-gray-300 text-base sm:text-lg overflow-hidden line-clamp-4 transition-all duration-300 mb-4">
                           {card.overview}
                       </div>
                       {/* View Details Button */}
-                      <div className="flex flex-row" data-oid="k2a0pdy">
-                          <Link href={`/details/tvshow/${title}`} data-oid="h.c0.2g">
-                              <button
-                                  className="text-white bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 rounded-3xl flex items-center text-sm md:text-base transition-all duration-750 ease-in-out gap-0.5"
-                                  data-oid="d2il:_v"
-                              >
+                      <div className="flex flex-row">
+                          <Link href={`/details/tvshow/${title}`}>
+                              <button className="text-white bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-4 py-2 rounded-3xl flex items-center text-sm md:text-base transition-all duration-750 ease-in-out gap-0.5">
                                   View Details
-                                  <ChevronRightIcon className="size-4" data-oid="t74m9yz" />
+                                  <ChevronRightIcon className="size-4" />
                               </button>
                           </Link>
                       </div>
@@ -457,33 +413,21 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                 onTouchStart={handleTouchStart} // Detect touch start
                 onTouchEnd={handleTouchEnd} // Detect touch end
                 onTouchCancel={handleTouchCancel} // Detect touch cancel
-                data-oid=":m68hl:"
             >
                 <div
                     className="rounded-lg border border-gray-400/50 overflow-hidden relative transition-transform duration-300 w-[140px] sm:w-[150px] md:w-[180px] lg:w-[180px] xl:w-[200px]
                                                      h-[210px] sm:h-[220px] md:h-[250px] lg:h-[280px] xl:h-[300px]"
-                    data-oid="lf5zefh"
                 >
                     {/* Episodes Count Bubble */}
                     {episodesCount !== null && (
-                        <div
-                            className="absolute top-0 right-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md shadow-lg"
-                            data-oid="555qhiz"
-                        >
-                            <p className="text-gray-700 text-sm" data-oid="69hvz1x">
-                                {episodesCount}
-                            </p>
-                            <p className="text-xs" data-oid="e6ir09l">
-                                Ep{episodesCount > 1 ? 's' : ''}
-                            </p>
+                        <div className="absolute top-0 right-0 z-10 bg-gradient-to-r font-mono from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 text-white font-bold px-2 py-1 rounded-md shadow-lg">
+                            <p className="text-gray-700 text-sm">{episodesCount}</p>
+                            <p className="text-xs">Ep{episodesCount > 1 ? 's' : ''}</p>
                         </div>
                     )}
                     {/* Skeleton Loader */}
                     {!imageLoaded && (
-                        <div
-                            className="absolute inset-0 bg-gray-700 animate-pulse rounded-lg"
-                            data-oid="fs.wd88"
-                        />
+                        <div className="absolute inset-0 bg-gray-700 animate-pulse rounded-lg" />
                     )}
                     {/* Card Image (fixed once randomly selected) */}
                     {cardImage && (
@@ -494,34 +438,19 @@ export const TvShowCard: React.FC<TvShowCardProps> = ({ title, episodesCount = n
                                 imageLoaded ? 'opacity-100' : 'opacity-0'
                             }`}
                             onLoad={() => setImageLoaded(true)}
-                            data-oid="v515ohh"
                         />
                     )}
                     {/* Overlay */}
-                    <div
-                        className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                        data-oid="58u.4qy"
-                    >
-                        <div className="absolute bottom-0 p-4 w-full" data-oid="4owmyv5">
-                            <h3
-                                className="text-sm sm:text-base md:text-lg font-semibold text-white"
-                                data-oid="pdh18ik"
-                            >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
+                        <div className="absolute bottom-0 p-4 w-full">
+                            <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white">
                                 {card?.title || 'Loading...'}
                             </h3>
-                            <div
-                                className="flex items-center space-x-2 mt-1 text-xs sm:text-sm"
-                                data-oid="0amea.o"
-                            >
-                                <span
-                                    className="text-yellow-400 flex gap-1 items-center"
-                                    data-oid="_8wrzre"
-                                >
-                                    <StarIcon className="size-3" data-oid="9dhygj5" /> 0
+                            <div className="flex items-center space-x-2 mt-1 text-xs sm:text-sm">
+                                <span className="text-yellow-400 flex gap-1 items-center">
+                                    <StarIcon className="size-3" /> 0
                                 </span>
-                                <span className="text-gray-300" data-oid="3.o:fj6">
-                                    • {card?.year || '----'}
-                                </span>
+                                <span className="text-gray-300">• {card?.year || '----'}</span>
                             </div>
                         </div>
                     </div>

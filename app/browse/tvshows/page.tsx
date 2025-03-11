@@ -49,18 +49,15 @@ function TvShowsContent() {
 
     const handlePageChange = (newPage: number) => {
         if (newPage >= 1 && newPage <= totalPages) {
-            router.push(`/tvshows?page=${newPage}`);
+            router.push(`/browse/tvshows?page=${newPage}`);
         }
     };
 
     return (
-        <div className="portrait:p-2 p-4" data-oid="09.2ybf">
+        <div className="portrait:p-2 p-4">
             {loading ? (
-                <div className="flex items-center justify-center min-h-[60vh]" data-oid="t_jpmt1">
-                    <div
-                        className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                        data-oid=":xzh3q6"
-                    ></div>
+                <div className="flex items-center justify-center min-h-[60vh]">
+                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
                 </div>
             ) : (
                 <>
@@ -68,48 +65,36 @@ function TvShowsContent() {
                     <div
                         key={currentPage}
                         className="flex flex-wrap justify-center items-center portrait:gap-2 gap-10"
-                        data-oid="t:r.ca_"
                     >
                         {tvshows.map((show, index) => (
                             <div
                                 key={`${show.title}-${index}`}
                                 className="transform transition-transform duration-300 hover:scale-105 w-[fit-content]"
-                                data-oid="tv1r04x"
                             >
-                                <TvShowCard
-                                    title={show.title}
-                                    episodesCount={show.episodeCount}
-                                    data-oid="548h_wu"
-                                />
+                                <TvShowCard title={show.title} episodesCount={show.episodeCount} />
                             </div>
                         ))}
                     </div>
 
                     {/* Pagination */}
-                    <div
-                        className="mt-12 flex flex-row items-center justify-center gap-2"
-                        data-oid="bjp-chb"
-                    >
-                        <div className="flex items-center gap-2" data-oid="xr.ttb0">
+                    <div className="mt-12 flex flex-row items-center justify-center gap-2">
+                        <div className="flex items-center gap-2">
                             <button
                                 onClick={() => handlePageChange(1)}
                                 disabled={currentPage <= 1}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="ljt7tzz"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="a9vh2ut"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
-                                        data-oid="bxxhdmw"
                                     />
                                 </svg>
                             </button>
@@ -117,55 +102,46 @@ function TvShowsContent() {
                                 onClick={() => handlePageChange(currentPage - 1)}
                                 disabled={currentPage <= 1}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="ktg382l"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="s.v6u3t"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M15 19l-7-7 7-7"
-                                        data-oid="kpzjr3c"
                                     />
                                 </svg>
                             </button>
                         </div>
 
-                        <div className="flex items-center gap-2" data-oid=".uxqscd">
-                            <span
-                                className="px-4 py-2 rounded-lg bg-gray-800 text-white font-medium"
-                                data-oid="1nwwbr0"
-                            >
+                        <div className="flex items-center gap-2">
+                            <span className="px-4 py-2 rounded-lg bg-gray-800 text-white font-medium">
                                 Page {currentPage} of {totalPages}
                             </span>
                         </div>
 
-                        <div className="flex items-center gap-2" data-oid="f567:x5">
+                        <div className="flex items-center gap-2">
                             <button
                                 onClick={() => handlePageChange(currentPage + 1)}
                                 disabled={currentPage >= totalPages}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid=":2k6hj8"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="1nacg4l"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M9 5l7 7-7 7"
-                                        data-oid="lz.ufci"
                                     />
                                 </svg>
                             </button>
@@ -173,21 +149,18 @@ function TvShowsContent() {
                                 onClick={() => handlePageChange(totalPages)}
                                 disabled={currentPage >= totalPages}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="dogid24"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="x.z95jd"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                                        data-oid="95j704v"
                                     />
                                 </svg>
                             </button>
@@ -203,45 +176,29 @@ export default function TvShowsPage() {
     const [filterActive, setFilterActive] = useState(false);
 
     return (
-        <div className="page min-h-screen pt-20 pb-4" data-oid="a09u7ed">
-            <div className="container mx-auto portrait:px-3 px-4" data-oid="i1t5y7.">
+        <div className="page min-h-screen pt-20 pb-4">
+            <div className="container mx-auto portrait:px-3 px-4">
                 {/* Header Section */}
-                <div className="mb-8 space-y-2" data-oid="81gyiv-">
-                    <h2 className="text-4xl font-bold text-white" data-oid="tfyrxwe">
-                        TV Shows
-                    </h2>
-                    <p className="text-gray-400 max-w-3xl" data-oid="nlzmy43">
+                <div className="mb-8 space-y-2">
+                    <h2 className="text-4xl font-bold text-white">TV Shows</h2>
+                    <p className="text-gray-400 max-w-3xl">
                         Explore our collection of TV series from various genres. From drama to
                         comedy, find your next binge-worthy show here.
                     </p>
-                    <GenresFilter
-                        mediaType="series"
-                        onFilterChange={setFilterActive}
-                        data-oid="zrcr8o3"
-                    />
+                    <GenresFilter mediaType="series" onFilterChange={setFilterActive} />
                 </div>
 
                 {/* Content Section */}
                 {!filterActive && (
-                    <div
-                        className="bg-gray-800/30 rounded-3xl backdrop-blur-sm border border-gray-700/50"
-                        data-oid="_7abbj1"
-                    >
+                    <div className="bg-gray-800/30 rounded-3xl backdrop-blur-sm border border-gray-700/50">
                         <Suspense
                             fallback={
-                                <div
-                                    className="flex items-center justify-center min-h-[50vh]"
-                                    data-oid=".flwxm7"
-                                >
-                                    <div
-                                        className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                        data-oid="q983.5."
-                                    ></div>
+                                <div className="flex items-center justify-center min-h-[50vh]">
+                                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
                                 </div>
                             }
-                            data-oid="_x8_92:"
                         >
-                            <TvShowsContent data-oid="0x0su0s" />
+                            <TvShowsContent />
                         </Suspense>
                     </div>
                 )}

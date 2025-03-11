@@ -20,37 +20,23 @@ export default function CastSection({ movie }: CastSectionProps) {
     const visibleCharacters = expanded ? movie.characters : movie.characters?.slice(0, 5);
 
     return (
-        <div
-            className="flex-1 bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50"
-            data-oid="xvljy7c"
-        >
-            <div className="flex justify-between items-center mb-2" data-oid="1627pqg">
-                <h2 className="text-xl font-semibold text-white" data-oid="-jl42ys">
-                    Cast
-                </h2>
+        <div className="flex-1 bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50">
+            <div className="flex justify-between items-center mb-2">
+                <h2 className="text-xl font-semibold text-white">Cast</h2>
                 {movie.characters && movie.characters.length > 5 && (
                     <button
                         onClick={() => setExpanded(!expanded)}
                         className="text-white hover:text-gray-300 flex items-center"
-                        data-oid="shxhbl1"
                     >
                         {expanded ? 'Hide' : 'Show'}{' '}
-                        {expanded ? (
-                            <ChevronUp size={18} data-oid="73i9oh_" />
-                        ) : (
-                            <ChevronDown size={18} data-oid="e7pbexl" />
-                        )}
+                        {expanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                     </button>
                 )}
             </div>
 
-            <div className="flex flex-wrap gap-4" data-oid="k16rm9-">
+            <div className="flex flex-wrap gap-4">
                 {visibleCharacters?.map((character) => (
-                    <div
-                        key={character.id}
-                        className="flex items-center space-x-3"
-                        data-oid="il89uph"
-                    >
+                    <div key={character.id} className="flex items-center space-x-3">
                         <img
                             src={
                                 character.personImgURL ||
@@ -59,22 +45,18 @@ export default function CastSection({ movie }: CastSectionProps) {
                             }
                             alt={character.personName}
                             className="w-12 h-12 rounded-full object-cover"
-                            data-oid="xseu92d"
                         />
 
-                        <div data-oid="zmir0no">
+                        <div>
                             <a
                                 target="_blank"
                                 href={`https://thetvdb.com/people/${character.url}`}
                                 className="text-white font-semibold hover:underline"
-                                data-oid="ory3c:w"
                             >
                                 {character.personName}
                             </a>
                             {character.name && (
-                                <p className="text-sm text-gray-400" data-oid="e1z0ykj">
-                                    as {character.name}
-                                </p>
+                                <p className="text-sm text-gray-400">as {character.name}</p>
                             )}
                         </div>
                     </div>

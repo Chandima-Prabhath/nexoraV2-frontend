@@ -180,37 +180,25 @@ export default function SearchPage() {
     const flattenedEpisodes = results?.episodes ?? [];
 
     return (
-        <div className="page min-h-screen pt-20 pb-4" data-oid="lc:bm.n">
-            <div className="container mx-auto portrait:px-3 px-4" data-oid="qqgm:ej">
+        <div className="page min-h-screen pt-20 pb-4">
+            <div className="container mx-auto portrait:px-3 px-4">
                 {/* Header Section */}
-                <div className="mb-8 space-y-2" data-oid="vj1qb:m">
-                    <h2
-                        className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent"
-                        data-oid="57ab-yq"
-                    >
+                <div className="mb-8 space-y-2">
+                    <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
                         Search
                     </h2>
-                    <p className="text-gray-400 max-w-3xl" data-oid="y2r8f9d">
+                    <p className="text-gray-400 max-w-3xl">
                         Find your favorite movies, TV shows, and episodes
                     </p>
                 </div>
 
                 {/* Search + Filters */}
-                <form onSubmit={handleSubmit} className="mb-10" data-oid="p-73l7:">
-                    <div
-                        className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
-                        data-oid="u4-_qj_"
-                    >
+                <form onSubmit={handleSubmit} className="mb-10">
+                    <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                         {/* Search Input with Icon */}
-                        <div className="relative w-full md:w-96" data-oid=".ptsw6h">
-                            <div
-                                className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-                                data-oid="9o-.wvp"
-                            >
-                                <MagnifyingGlassIcon
-                                    className="h-5 w-5 text-gray-400"
-                                    data-oid="d3b33dp"
-                                />
+                        <div className="relative w-full md:w-96">
+                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" />
                             </div>
                             <input
                                 id="search"
@@ -222,12 +210,11 @@ export default function SearchPage() {
                                 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
                                 transition-all duration-300 shadow-lg"
                                 autoFocus
-                                data-oid="wjf:8r8"
                             />
                         </div>
 
                         {/* Filter Pills */}
-                        <div className="flex flex-wrap gap-3 items-center" data-oid="x8dapcx">
+                        <div className="flex flex-wrap gap-3 items-center">
                             {['films', 'series', 'episodes'].map((type) => {
                                 const isActive = selectedTypes.includes(type);
                                 // Make the label more user-friendly
@@ -249,7 +236,6 @@ export default function SearchPage() {
                                                 ? 'bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-500 hover:to-purple-400 text-white shadow-lg shadow-purple-500/20'
                                                 : 'bg-gray-800/80 text-gray-300 hover:bg-gray-700/80 border border-gray-700'
                                         }`}
-                                        data-oid="1y-8mbq"
                                     >
                                         {label}
                                     </button>
@@ -261,29 +247,16 @@ export default function SearchPage() {
 
                 {/* Error message */}
                 {error && (
-                    <div
-                        className="bg-red-900/30 border border-red-500/50 rounded-md p-4 mb-6"
-                        data-oid="ck3xq-a"
-                    >
-                        <p className="text-red-400" data-oid="e4bicp5">
-                            {error}
-                        </p>
+                    <div className="bg-red-900/30 border border-red-500/50 rounded-md p-4 mb-6">
+                        <p className="text-red-400">{error}</p>
                     </div>
                 )}
 
                 {/* Loading state */}
                 {spinnerLoading && query && !results && (
-                    <div
-                        className="flex flex-col items-center justify-center py-20"
-                        data-oid="vg2_cna"
-                    >
-                        <div
-                            className="w-16 h-16 border-t-4 border-purple-500 border-solid rounded-full animate-spin"
-                            data-oid="h5hyxii"
-                        ></div>
-                        <p className="mt-4 text-gray-400" data-oid="-jg9p4s">
-                            Searching for "{query}"...
-                        </p>
+                    <div className="flex flex-col items-center justify-center py-20">
+                        <div className="w-16 h-16 border-t-4 border-purple-500 border-solid rounded-full animate-spin"></div>
+                        <p className="mt-4 text-gray-400">Searching for "{query}"...</p>
                     </div>
                 )}
 
@@ -294,20 +267,14 @@ export default function SearchPage() {
                     !results.films?.length &&
                     !results.series?.length &&
                     !flattenedEpisodes.length && (
-                        <div
-                            className="flex flex-col items-center justify-center py-20 text-center"
-                            data-oid="6rkvtej"
-                        >
-                            <div className="w-20 h-20 mb-4 text-gray-500" data-oid="ph2m:zl">
-                                <MagnifyingGlassIcon className="w-full h-full" data-oid="s5uxpt_" />
+                        <div className="flex flex-col items-center justify-center py-20 text-center">
+                            <div className="w-20 h-20 mb-4 text-gray-500">
+                                <MagnifyingGlassIcon className="w-full h-full" />
                             </div>
-                            <h3
-                                className="text-2xl font-semibold text-white mb-2"
-                                data-oid="i3er3ho"
-                            >
+                            <h3 className="text-2xl font-semibold text-white mb-2">
                                 No results found
                             </h3>
-                            <p className="text-gray-400 max-w-md" data-oid="0tpunlj">
+                            <p className="text-gray-400 max-w-md">
                                 We couldn't find anything matching "{query}". Try different keywords
                                 or check your spelling.
                             </p>
@@ -316,45 +283,28 @@ export default function SearchPage() {
 
                 {/* Results */}
                 {results && (
-                    <div className="mt-4 space-y-12" data-oid="r-btn.c">
+                    <div className="mt-4 space-y-12">
                         {/* Movies Section */}
                         {selectedTypes.includes('films') && results.films?.length > 0 && (
-                            <ScrollSection title="Movies" link="/browse/movies" data-oid="8:kes0o">
+                            <ScrollSection title="Movies" link="/browse/movies">
                                 {results.films.map((film, index) => (
-                                    <MovieCard
-                                        key={index}
-                                        title={film.replace('films/', '')}
-                                        data-oid="78uy.i2"
-                                    />
+                                    <MovieCard key={index} title={film.replace('films/', '')} />
                                 ))}
                             </ScrollSection>
                         )}
 
                         {/* TV Shows Section */}
                         {selectedTypes.includes('series') && results.series?.length > 0 && (
-                            <ScrollSection
-                                title="TV Shows"
-                                link="/browse/tvshows"
-                                data-oid="1j6bh_u"
-                            >
+                            <ScrollSection title="TV Shows" link="/browse/tvshows">
                                 {results.series.map((serie, index) => (
-                                    <TvShowCard
-                                        key={index}
-                                        title={serie}
-                                        episodesCount={null}
-                                        data-oid="c6-96e_"
-                                    />
+                                    <TvShowCard key={index} title={serie} episodesCount={null} />
                                 ))}
                             </ScrollSection>
                         )}
 
                         {/* Episodes Section (flattened, with metadata) */}
                         {selectedTypes.includes('episodes') && flattenedEpisodes.length > 0 && (
-                            <ScrollSection
-                                title="Episodes"
-                                link="/browse/tvshows"
-                                data-oid="44axtnt"
-                            >
+                            <ScrollSection title="Episodes" link="/browse/tvshows">
                                 {flattenedEpisodes.map((episode) => (
                                     <Link
                                         href={`/watch/tvshow/${episode.series}/${episode.season}/${episode.title}`}
@@ -362,64 +312,38 @@ export default function SearchPage() {
                                         className="w-[180px] flex-shrink-0 rounded-md overflow-hidden bg-gray-800/60 backdrop-blur-sm 
                                         border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300
                                         shadow-lg hover:shadow-purple-500/10 flex flex-col"
-                                        data-oid="l-7r92c"
                                     >
                                         {/* Episode image with fallback */}
-                                        <div
-                                            className="relative h-[100px] bg-gray-900"
-                                            data-oid="68qu8jz"
-                                        >
+                                        <div className="relative h-[100px] bg-gray-900">
                                             {episode.metadata?.image ? (
                                                 <img
                                                     src={`https://artworks.thetvdb.com${episode.metadata.image}`}
                                                     alt={episode.metadata.name || episode.title}
                                                     className="w-full h-full object-cover"
-                                                    data-oid="l87nm6j"
                                                 />
                                             ) : (
-                                                <div
-                                                    className="w-full h-full flex items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900"
-                                                    data-oid="o3::gjq"
-                                                >
-                                                    <span
-                                                        className="text-gray-500 text-xs"
-                                                        data-oid="k3yjs2b"
-                                                    >
+                                                <div className="w-full h-full flex items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900">
+                                                    <span className="text-gray-500 text-xs">
                                                         No Preview
                                                     </span>
                                                 </div>
                                             )}
-                                            <div
-                                                className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"
-                                                data-oid="ur7g2_r"
-                                            ></div>
+                                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                                         </div>
 
                                         {/* Content */}
-                                        <div
-                                            className="p-3 flex flex-col flex-grow"
-                                            data-oid="a08kd.s"
-                                        >
-                                            <h4
-                                                className="text-sm font-semibold line-clamp-1 mb-1 text-white"
-                                                data-oid="2.wj7l2"
-                                            >
+                                        <div className="p-3 flex flex-col flex-grow">
+                                            <h4 className="text-sm font-semibold line-clamp-1 mb-1 text-white">
                                                 {episode.metadata?.name ?? episode.title}
                                             </h4>
 
                                             {/* Series and season info */}
-                                            <div
-                                                className="text-xs text-purple-400 mb-2"
-                                                data-oid="obvym_b"
-                                            >
+                                            <div className="text-xs text-purple-400 mb-2">
                                                 {episode.series} • {episode.season}
                                             </div>
 
                                             {/* Overview */}
-                                            <p
-                                                className="text-xs text-gray-400 line-clamp-3 flex-grow"
-                                                data-oid="1wcbfiw"
-                                            >
+                                            <p className="text-xs text-gray-400 line-clamp-3 flex-grow">
                                                 {episode.metadata?.overview ||
                                                     'No description available'}
                                             </p>

@@ -12,5 +12,5 @@ export default function MyListPage() {
     if (spinnerLoading === false) {
         setSpinnerLoading(true);
     }
-    return <div data-oid="_cxsy6_"></div>;
+    return <div></div>;
 }
