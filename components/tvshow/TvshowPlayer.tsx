@@ -37,29 +37,29 @@ interface ProgressData {
 }
 
 const PlayerSpinner: React.FC<{ loading: boolean }> = ({ loading }) => (
-    <AnimatePresence data-oid="ev_5e1_">
+    <AnimatePresence data-oid="2r.qrxo">
         {loading && (
             <motion.div
                 initial={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
                 className="absolute inset-0 z-[500] flex items-center justify-center bg-gray-900/50"
-                data-oid="wmf.vc_"
+                data-oid="mdkl9r:"
             >
-                <div className="relative flex flex-col items-center" data-oid="phdsemt">
+                <div className="relative flex flex-col items-center" data-oid="0v_vb4u">
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
                         className="relative w-16 h-16"
-                        data-oid="mh:aheu"
+                        data-oid="1wi5wau"
                     >
                         <div
                             className="absolute inset-0 border-4 border-transparent border-t-purple-500 border-l-purple-500 rounded-full"
-                            data-oid="-4.sj7c"
+                            data-oid="-4ym4xi"
                         ></div>
                         <div
                             className="absolute inset-0 w-full h-full animate-ping rounded-full bg-purple-500 opacity-30"
-                            data-oid="53bjkca"
+                            data-oid="dklkag_"
                         ></div>
                     </motion.div>
                 </div>
@@ -432,7 +432,7 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
             className="z-30 absolute flex w-full h-full"
             ref={containerRef}
             onMouseMove={resetInactivityTimer}
-            data-oid="sxs:zid"
+            data-oid="gkz.1y4"
         >
             {videoUrl ? (
                 <>
@@ -450,13 +450,13 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                         onCanPlay={() => setLocalSpinnerLoading(false)}
                         onPlaying={() => setLocalSpinnerLoading(false)}
                         autoPlay
-                        data-oid="9e:ywv4"
+                        data-oid="7xo83.:"
                     >
                         {!isVideoTs && (
                             <source
                                 type="video/webm"
                                 src={videoBlobUrl || videoUrl}
-                                data-oid="n40hd4x"
+                                data-oid="hiepmjj"
                             />
                         )}
                     </video>
@@ -465,11 +465,11 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                         <div
                             className="absolute z-50 pointer-events-none"
                             style={{ top: '80px', left: '20px' }}
-                            data-oid="r34lvj_"
+                            data-oid="wc-cm:8"
                         >
                             <div
                                 className="px-6 py-3 bg-black bg-opacity-70 rounded-lg border border-white text-white text-3xl font-bold animate-fade-out"
-                                data-oid=".jjh8if"
+                                data-oid="00039tr"
                             >
                                 {contentRatings[0].country ? `[${contentRatings[0].country}] ` : ''}
                                 |{contentRatings[0].name}
@@ -478,7 +478,7 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                         </div>
                     )}
 
-                    <PlayerSpinner loading={localSpinnerLoading} data-oid="c5-ln:h" />
+                    <PlayerSpinner loading={localSpinnerLoading} data-oid="6ug2bho" />
 
                     {/* Controls Overlay */}
                     <div
@@ -487,21 +487,21 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                                 ? 'opacity-100 pointer-events-auto'
                                 : 'opacity-0 pointer-events-none'
                         }`}
-                        data-oid="iyvb63v"
+                        data-oid="308s0zk"
                     >
                         <div
                             className="flex items-center justify-between p-6 bg-gradient-to-b from-black/90 to-transparent"
-                            data-oid="bov0oeu"
+                            data-oid="6zlp6u9"
                         >
-                            <div className="flex flex-col" data-oid="lt-0dma">
+                            <div className="flex flex-col" data-oid="2dayjon">
                                 <h1
                                     className="text-white text-3xl font-extrabold"
-                                    data-oid="l9zkj9m"
+                                    data-oid="j3ox_n2"
                                 >
                                     {videoTitle || 'Video Player'}
                                 </h1>
                                 {episodeMatch && (
-                                    <p className="text-white text-xl mt-2" data-oid="5mk.28g">
+                                    <p className="text-white text-xl mt-2" data-oid="i3tc8-5">
                                         Season {seasonNumber} - Episode {episodeNumber}:{' '}
                                         {episodeTitleClean.replace(/_/g, ' ')}
                                     </p>
@@ -509,7 +509,7 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                                 {contentRatings.length > 0 && (
                                     <div
                                         className="mt-2 inline-block bg-gray-700 text-white text-sm px-3 py-1 rounded-md"
-                                        data-oid="quyooys"
+                                        data-oid="yhd:vj_"
                                     >
                                         {contentRatings[0].country
                                             ? `[${contentRatings[0].country}] `
@@ -522,21 +522,21 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                                 <button
                                     onClick={handleClose}
                                     className="text-white hover:text-red-400 transition-colors"
-                                    data-oid="znif8qu"
+                                    data-oid="vob-sn7"
                                 >
-                                    <XCircleIcon className="size-14" data-oid="27-a2t6" />
+                                    <XCircleIcon className="size-14" data-oid="f392vag" />
                                 </button>
                             )}
                         </div>
                         <div
                             className="flex flex-col p-6 bg-gradient-to-t from-black/90 to-transparent"
-                            data-oid="4.0r-3a"
+                            data-oid=":voq8d5"
                         >
                             <div
                                 className="flex items-center justify-between mb-4"
-                                data-oid="ddnu_f1"
+                                data-oid="t.grxmx"
                             >
-                                <span className="text-white text-sm" data-oid=":zv4036">
+                                <span className="text-white text-sm" data-oid="eowwlki">
                                     {formatTime(currentTime)}
                                 </span>
                                 {/* Custom Progress Bar */}
@@ -545,21 +545,21 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                                     ref={progressBarRef}
                                     onMouseMove={handleProgressBarHover}
                                     onMouseLeave={handleProgressBarLeave}
-                                    data-oid="wpjhted"
+                                    data-oid="2_41lve"
                                 >
-                                    <div className="h-2 rounded bg-gray-700" data-oid="pwdyl3l">
+                                    <div className="h-2 rounded bg-gray-700" data-oid="-105qfd">
                                         <div
                                             className="h-2 rounded bg-purple-300"
                                             style={{
                                                 width: `${bufferedPercent}%`,
                                                 pointerEvents: 'none',
                                             }}
-                                            data-oid=".poil2s"
+                                            data-oid="8b9f-pf"
                                         ></div>
                                         <div
                                             className="h-2 rounded bg-purple-700 absolute top-0 left-0"
                                             style={{ width: `${playedPercent}%` }}
-                                            data-oid="ipicg7m"
+                                            data-oid="i1996es"
                                         ></div>
                                     </div>
                                     <input
@@ -575,7 +575,7 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                                         onTouchStart={handleSeekStart}
                                         onChange={handleSeekEnd}
                                         className="absolute top-0 left-0 w-full h-2 opacity-0 cursor-pointer"
-                                        data-oid="34u8s2m"
+                                        data-oid="7w0k00n"
                                     />
 
                                     {/* Hover time tooltip */}
@@ -586,43 +586,43 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                                                 left: `${hoverPos}px`,
                                                 transform: 'translateX(-50%)',
                                             }}
-                                            data-oid="7y.fj9x"
+                                            data-oid="04hscva"
                                         >
                                             {formatTime(hoverTime)}
                                         </div>
                                     )}
                                 </div>
-                                <span className="text-white text-sm" data-oid="6hpyi6_">
+                                <span className="text-white text-sm" data-oid="yv:9ia7">
                                     {formatTime(duration)}
                                 </span>
                             </div>
-                            <div className="flex items-center justify-between" data-oid="hpcjgb1">
-                                <div className="flex items-center space-x-6" data-oid="z-bepyv">
+                            <div className="flex items-center justify-between" data-oid="ugjkkaw">
+                                <div className="flex items-center space-x-6" data-oid="l_91ebg">
                                     <button
                                         onClick={togglePlay}
                                         className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="6mkwr.p"
+                                        data-oid="6z4phov"
                                     >
                                         {isPlaying ? (
-                                            <PauseIcon className="w-10 h-10" data-oid="76ou:ea" />
+                                            <PauseIcon className="w-10 h-10" data-oid="y.clk5w" />
                                         ) : (
-                                            <PlayIcon className="w-10 h-10" data-oid="w4o.n2r" />
+                                            <PlayIcon className="w-10 h-10" data-oid="2.3p41b" />
                                         )}
                                     </button>
                                     <button
                                         onClick={toggleMute}
                                         className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="z3bjdvz"
+                                        data-oid="7id-9qu"
                                     >
                                         {isMuted ? (
                                             <SpeakerXMarkIcon
                                                 className="w-10 h-10"
-                                                data-oid="0jcvklb"
+                                                data-oid="-ohfc5s"
                                             />
                                         ) : (
                                             <SpeakerWaveIcon
                                                 className="w-10 h-10"
-                                                data-oid="482c1l0"
+                                                data-oid="6e9xsgl"
                                             />
                                         )}
                                     </button>
@@ -634,34 +634,34 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
                                         value={volume}
                                         onChange={handleVolumeChange}
                                         className="w-24 accent-purple-500"
-                                        data-oid="0hsdut5"
+                                        data-oid="q1693.w"
                                     />
                                 </div>
-                                <div className="flex items-center space-x-6" data-oid="0687.7.">
+                                <div className="flex items-center space-x-6" data-oid="31a645-">
                                     <button
                                         onClick={toggleEpisodesContainer}
                                         className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="_1.dt73"
+                                        data-oid="v957ad0"
                                     >
                                         <RectangleStackIcon
                                             className="w-10 h-10"
-                                            data-oid="agfkmhp"
+                                            data-oid="nnjqeyf"
                                         />
                                     </button>
                                     <button
                                         onClick={toggleFullscreen}
                                         className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="o0_hpbh"
+                                        data-oid="b78vjhr"
                                     >
                                         {!isFullscreen ? (
                                             <ArrowsPointingOutIcon
                                                 className="w-10 h-10"
-                                                data-oid=".:m5clw"
+                                                data-oid="c:wc4.n"
                                             />
                                         ) : (
                                             <ArrowsPointingInIcon
                                                 className="w-10 h-10"
-                                                data-oid="9oge8jl"
+                                                data-oid="hmtc1ip"
                                             />
                                         )}
                                     </button>
@@ -673,32 +673,32 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
             ) : (
                 <div
                     className="p-6 bg-gray-800 text-gray-200 rounded-lg shadow-md"
-                    data-oid="b6bw0lv"
+                    data-oid="i710ols"
                 >
-                    <h2 className="text-xl font-semibold mb-4" data-oid="kerfi8e">
+                    <h2 className="text-xl font-semibold mb-4" data-oid="ojwzpqw">
                         Fetching Video Link
                     </h2>
                     {progress ? (
-                        <div className="space-y-2" data-oid="4:nrsff">
-                            <p className="text-sm" data-oid="g6x3s3q">
+                        <div className="space-y-2" data-oid="s0461yq">
+                            <p className="text-sm" data-oid="7g6gsw5">
                                 Status: {progress.status}
                             </p>
-                            <p className="text-sm" data-oid="6lt58mx">
+                            <p className="text-sm" data-oid="udlgugm">
                                 Progress: {progress.progress.toFixed(2)}%
                             </p>
-                            <p className="text-sm" data-oid="9-p0opa">
+                            <p className="text-sm" data-oid="xb1wmng">
                                 Downloaded: {progress.downloaded} / {progress.total}
                             </p>
                         </div>
                     ) : (
-                        <p className="text-sm" data-oid="3u352p-">
+                        <p className="text-sm" data-oid="ncyaouh">
                             Initializing link fetching...
                         </p>
                     )}
                 </div>
             )}
 
-            <style jsx data-oid="nq3900x">{`
+            <style jsx data-oid="rgs_qaa">{`
                 @keyframes fade-out {
                     0% {
                         opacity: 1;

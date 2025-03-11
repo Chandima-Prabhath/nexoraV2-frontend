@@ -34,18 +34,18 @@ export default function ScrollSection({ title, link, children }: ScrollSectionPr
     };
 
     return (
-        <section className="py-4 relative group" data-oid="bq9.y4j">
-            <div className="container mx-auto px-6" data-oid=".rfj9rw">
+        <section className="py-4 relative group" data-oid="rw2.gbb">
+            <div className="container mx-auto px-6" data-oid="9iozgth">
                 <div
                     className="font-bold flex flex-row items-center mb-6 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent"
-                    data-oid=".wtd951"
+                    data-oid="-_-oe5z"
                 >
-                    <Link href={link} data-oid="rxd6xj8">
-                        <h2 className="text-2xl" data-oid="qnqjf3l">
+                    <Link href={link} data-oid="_:zeu13">
+                        <h2 className="text-2xl" data-oid="nel62.9">
                             {title}
                         </h2>
                     </Link>
-                    <ChevronRightIcon className="size-6 text-pink-400" data-oid="b90h:ix" />
+                    <ChevronRightIcon className="size-6 text-pink-400" data-oid="o9a_8:x" />
                 </div>
 
                 {/* Scroll Arrows */}
@@ -53,11 +53,11 @@ export default function ScrollSection({ title, link, children }: ScrollSectionPr
                     <button
                         onClick={() => scroll('left')}
                         className="absolute left-0 top-1/2 z-10 transform -translate-y-1/6 bg-gradient-to-r from-transparent to-gray-900/50 hover:bg-gradient-to-r hover:from-transparent hover:to-purple-900 rounded-full p-1 ml-2 transition-all duration-500 ease-in-out"
-                        data-oid="m8iy5-n"
+                        data-oid="vdtfrkw"
                     >
                         <ChevronLeftIcon
                             className="size-8 lg:size-10 text-gray-300/50 hover:text-purple-400/50 transition-colors"
-                            data-oid="zlb3kn9"
+                            data-oid="wshz5v."
                         />
                     </button>
                 )}
@@ -66,11 +66,11 @@ export default function ScrollSection({ title, link, children }: ScrollSectionPr
                     <button
                         onClick={() => scroll('right')}
                         className="absolute right-0 top-1/2 z-10 transform -translate-y-1/6 bg-gradient-to-r from-gray-600/50 to-transparent hover:bg-gradient-to-r hover:from-purple-900 hover:to-transparent rounded-full p-1 mr-2 transition-all duration-300 ease-in-out"
-                        data-oid="0ta35p5"
+                        data-oid="e6znp6y"
                     >
                         <ChevronRightIcon
                             className="size-8 lg:size-10 text-gray-300/50 hover:text-purple-400/50 transition-colors"
-                            data-oid="xqezgw:"
+                            data-oid="mwf4xlu"
                         />
                     </button>
                 )}
@@ -86,7 +86,7 @@ export default function ScrollSection({ title, link, children }: ScrollSectionPr
                         WebkitMaskImage:
                             'linear-gradient(to right, transparent, black 2%, black 98%, transparent)',
                     }}
-                    data-oid="5m-hm.."
+                    data-oid="t.3edee"
                 >
                     {children}
                 </div>

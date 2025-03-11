@@ -14,13 +14,13 @@ const MoviePlayerPage = () => {
     };
 
     if (!title) {
-        return <div data-oid="goesztb">Movie title is missing.</div>;
+        return <div data-oid="pto4:mn">Movie title is missing.</div>;
     }
     return (
         <MoviePlayer
             videoTitle={decodeURIComponent(videoTitle) as string}
             onClosePlayer={handleClose}
-            data-oid=".7jn:cu"
+            data-oid="xe:gkqi"
         />
     );
 };

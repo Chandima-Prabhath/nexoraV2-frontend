@@ -6,8 +6,10 @@ import {
     SpeakerXMarkIcon,
     ArrowsPointingOutIcon,
     ArrowsPointingInIcon,
+    ForwardIcon,
+    BackwardIcon,
 } from '@heroicons/react/24/solid';
-import { XCircleIcon } from '@heroicons/react/24/outline';
+import { XCircleIcon, FilmIcon } from '@heroicons/react/24/outline';
 import { getMovieLinkByTitle } from '@/lib/lb';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -31,35 +33,131 @@ interface ProgressData {
 }
 
 const PlayerSpinner: React.FC<{ loading: boolean }> = ({ loading }) => (
-    <AnimatePresence data-oid="qut61fx">
+    <AnimatePresence data-oid="3rg.kut">
         {loading && (
             <motion.div
-                initial={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
-                className="absolute inset-0 z-[500] flex items-center justify-center bg-gray-900/50"
-                data-oid="7nc9y-o"
+                className="absolute inset-0 z-[500] flex items-center justify-center bg-black/70 backdrop-blur-sm"
+                data-oid="w-7kdty"
             >
-                <div className="relative flex flex-col items-center" data-oid="q0p6o17">
+                <div className="relative flex flex-col items-center" data-oid="63yyc1p">
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
-                        className="relative w-16 h-16"
-                        data-oid="6-l1wy6"
+                        className="relative w-20 h-20"
+                        data-oid="g3z1hzn"
                     >
                         <div
-                            className="absolute inset-0 border-4 border-transparent border-t-purple-500 border-l-purple-500 rounded-full"
-                            data-oid="6o5qh9c"
+                            className="absolute inset-0 border-4 border-transparent border-t-purple-600 border-l-purple-600 rounded-full"
+                            data-oid="puyv7b8"
                         ></div>
                         <div
-                            className="absolute inset-0 w-full h-full animate-ping rounded-full bg-purple-500 opacity-30"
-                            data-oid="-mpckr9"
+                            className="absolute inset-0 w-full h-full animate-pulse rounded-full bg-purple-500 opacity-20"
+                            data-oid="s4sogwn"
                         ></div>
                     </motion.div>
                 </div>
             </motion.div>
         )}
     </AnimatePresence>
+);
+
+// Ad component to show while fetching link
+const AdPlaceholder: React.FC<{ title: string }> = ({ title }) => (
+    <div
+        className="relative w-full h-full bg-gradient-to-br from-gray-900 to-black flex flex-col items-center justify-center overflow-hidden"
+        data-oid="nvrgwjk"
+    >
+        {/* Background animation */}
+        <div className="absolute inset-0 opacity-10" data-oid="n..w62y">
+            <motion.div
+                className="absolute w-[500px] h-[500px] rounded-full bg-purple-500 filter blur-3xl"
+                animate={{
+                    x: ['-20%', '120%'],
+                    y: ['30%', '60%'],
+                }}
+                transition={{
+                    repeat: Infinity,
+                    repeatType: 'reverse',
+                    duration: 15,
+                    ease: 'easeInOut',
+                }}
+                data-oid=":v:qajd"
+            />
+
+            <motion.div
+                className="absolute w-[300px] h-[300px] rounded-full bg-blue-500 filter blur-3xl"
+                animate={{
+                    x: ['120%', '-20%'],
+                    y: ['60%', '20%'],
+                }}
+                transition={{
+                    repeat: Infinity,
+                    repeatType: 'reverse',
+                    duration: 18,
+                    ease: 'easeInOut',
+                }}
+                data-oid="e_9h33o"
+            />
+        </div>
+
+        {/* Content */}
+        <div className="z-10 text-center max-w-2xl px-6 py-10" data-oid="p5wjmxi">
+            <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="mb-6 flex justify-center"
+                data-oid="m-f6agn"
+            >
+                <FilmIcon className="h-20 w-20 text-purple-500" data-oid="-jvln6-" />
+            </motion.div>
+
+            <motion.h2
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-3xl md:text-4xl font-bold text-white mb-4"
+                data-oid="6_.-gk."
+            >
+                Preparing "{title}"
+            </motion.h2>
+
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                data-oid="chwysrm"
+            >
+                <p className="text-gray-300 text-lg mb-8" data-oid="s0qizf:">
+                    Your movie is being prepared for streaming. This may take a moment.
+                </p>
+
+                <div
+                    className="relative w-full h-2 bg-gray-800 rounded-full overflow-hidden"
+                    data-oid="da482yx"
+                >
+                    <motion.div
+                        className="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-600 to-blue-500"
+                        initial={{ width: '0%' }}
+                        animate={{ width: '100%' }}
+                        transition={{
+                            duration: 15,
+                            ease: 'linear',
+                        }}
+                        data-oid="8.wk_a4"
+                    />
+                </div>
+
+                <p className="mt-4 text-purple-400 font-medium" data-oid="wlbw8t3">
+                    Premium members enjoy faster streaming preparation
+                </p>
+            </motion.div>
+        </div>
+    </div>
 );
 
 const MoviePlayer: React.FC<MoviePlayerProps> = ({
@@ -354,14 +452,14 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
             className="z-30 absolute flex w-full h-full"
             ref={containerRef}
             onMouseMove={resetInactivityTimer}
-            data-oid="p9frhan"
+            data-oid="h:6r:j-"
         >
             {videoUrl ? (
                 <>
                     <video
                         ref={videoRef}
                         crossOrigin="anonymous"
-                        className="w-full h-auto bg-black object-contain"
+                        className="w-full h-full bg-black object-contain"
                         style={{ pointerEvents: 'none' }}
                         onLoadedMetadata={handleLoadedMetadata}
                         onTimeUpdate={handleTimeUpdate}
@@ -372,31 +470,44 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                         onCanPlay={() => setLocalSpinnerLoading(false)}
                         onPlaying={() => setLocalSpinnerLoading(false)}
                         autoPlay
-                        data-oid="qa6_twj"
+                        data-oid="5twdzq9"
                     >
                         <source
                             src={videoBlobUrl || videoUrl}
                             type="video/webm"
-                            data-oid="_4gqdmv"
+                            data-oid="-5-prwd"
                         />
                     </video>
 
-                    {showRatingOverlay && contentRatings.length > 0 && (
-                        <div
-                            className="absolute z-50 pointer-events-none"
-                            style={{ top: '80px', left: '20px' }}
-                            data-oid="rg6kts7"
-                        >
-                            <div
-                                className="px-6 py-3 bg-black bg-opacity-70 rounded-lg border border-white text-white text-3xl font-bold animate-fade-out"
-                                data-oid=".s1h2f3"
+                    {/* Content Rating Overlay */}
+                    <AnimatePresence data-oid="p1nw850">
+                        {showRatingOverlay && contentRatings.length > 0 && (
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.4 }}
+                                className="absolute z-50 pointer-events-none top-24 left-8"
+                                data-oid="jvm62cf"
                             >
-                                {contentRatings[0].country ? `[${contentRatings[0].country}] ` : ''}
-                                {contentRatings[0].name}
-                            </div>
-                        </div>
-                    )}
-                    <PlayerSpinner loading={localSpinnerLoading} data-oid="n2z4ky8" />
+                                <div
+                                    className="px-6 py-3 bg-black/80 backdrop-blur-sm rounded-lg border border-purple-500/30 text-white text-2xl font-bold shadow-lg shadow-purple-500/20 animate-fade-out flex items-center"
+                                    data-oid="vhi4dao"
+                                >
+                                    <div
+                                        className="w-3 h-8 bg-purple-500 rounded-sm mr-3"
+                                        data-oid="b1f6kwg"
+                                    ></div>
+                                    {contentRatings[0].country
+                                        ? `${contentRatings[0].country} • `
+                                        : ''}
+                                    {contentRatings[0].name}
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+
+                    <PlayerSpinner loading={localSpinnerLoading} data-oid="n:z-8ax" />
 
                     {/* Controls Overlay */}
                     <div
@@ -405,26 +516,31 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                                 ? 'opacity-100 pointer-events-auto'
                                 : 'opacity-0 pointer-events-none'
                         }`}
-                        data-oid="rr38:ko"
+                        data-oid="e2monn7"
                     >
+                        {/* Top Controls */}
                         <div
-                            className="flex items-center justify-between p-6 bg-gradient-to-b from-black/90 to-transparent"
-                            data-oid="d39n193"
+                            className="flex items-center justify-between p-6 bg-gradient-to-b from-black/90 via-black/60 to-transparent"
+                            data-oid="3kbq6e6"
                         >
-                            <div className="flex flex-col" data-oid=":04lhf:">
+                            <div className="flex flex-col" data-oid="6v.v7z-">
                                 <h1
-                                    className="text-white text-3xl font-extrabold"
-                                    data-oid="k52kk.z"
+                                    className="text-white text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"
+                                    data-oid=":33ql9e"
                                 >
                                     {videoTitle || 'Video Player'}
                                 </h1>
                                 {contentRatings.length > 0 && (
                                     <div
-                                        className="mt-2 inline-block bg-gray-700 text-white text-sm px-3 py-1 rounded-md"
-                                        data-oid="yq5lb99"
+                                        className="mt-2 inline-flex items-center bg-black/60 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-md border border-gray-700/50"
+                                        data-oid="s91xhxt"
                                     >
+                                        <span
+                                            className="w-2 h-4 bg-purple-500 rounded-sm mr-2"
+                                            data-oid="tguw9sm"
+                                        ></span>
                                         {contentRatings[0].country
-                                            ? `[${contentRatings[0].country}] `
+                                            ? `${contentRatings[0].country} • `
                                             : ''}
                                         {contentRatings[0].name}
                                     </div>
@@ -433,37 +549,70 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                             {onClosePlayer && (
                                 <button
                                     onClick={handleClose}
-                                    className="text-white hover:text-red-400 transition-colors"
-                                    data-oid="b:3nl45"
+                                    className="text-white hover:text-red-400 transition-colors p-2 rounded-full hover:bg-black/30"
+                                    data-oid="c.1tmu3"
                                 >
-                                    <XCircleIcon className="size-12" data-oid="fj8imit" />
+                                    <XCircleIcon className="size-10" data-oid="puet9cc" />
                                 </button>
                             )}
                         </div>
+
+                        {/* Center Play/Pause Button (large) */}
                         <div
-                            className="flex flex-col p-6 bg-gradient-to-t from-black/90 to-transparent"
-                            data-oid="87mdm::"
+                            className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                            data-oid="0.-ltql"
                         >
+                            <AnimatePresence data-oid="1s:mmvo">
+                                {!isPlaying && (
+                                    <motion.button
+                                        initial={{ scale: 0.8, opacity: 0 }}
+                                        animate={{ scale: 1, opacity: 1 }}
+                                        exit={{ scale: 1.2, opacity: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                        onClick={togglePlay}
+                                        className="text-white bg-black/30 backdrop-blur-sm p-6 rounded-full hover:bg-purple-500/20 transition-all pointer-events-auto"
+                                        data-oid="c4qsa5f"
+                                    >
+                                        <PlayIcon className="size-20" data-oid="o7_nsgr" />
+                                    </motion.button>
+                                )}
+                            </AnimatePresence>
+                        </div>
+
+                        {/* Bottom Controls */}
+                        <div
+                            className="flex flex-col p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent"
+                            data-oid="y.nwbi-"
+                        >
+                            {/* Progress Bar */}
                             <div
                                 className="flex items-center justify-between mb-4"
-                                data-oid="39irs3l"
+                                data-oid="n80cuhy"
                             >
-                                <span className="text-white text-sm" data-oid="0lcneuq">
+                                <span className="text-white text-sm font-medium" data-oid="803pdk.">
                                     {formatTime(currentTime)}
                                 </span>
                                 {/* Custom Progress Bar */}
-                                <div className="relative w-full mx-4" data-oid="nu.mje:">
-                                    <div className="h-2 rounded bg-gray-700" data-oid="4ocx0p7">
+                                <div className="relative w-full mx-4 group" data-oid="izosy1v">
+                                    <div
+                                        className="h-1.5 rounded-full bg-gray-700/70 group-hover:h-2.5 transition-all"
+                                        data-oid="muldvwh"
+                                    >
                                         <div
-                                            className="h-2 rounded bg-purple-300"
+                                            className="h-full rounded-full bg-gray-400/50"
                                             style={{ width: `${bufferedPercent}%` }}
-                                            data-oid="0_y:7rq"
+                                            data-oid="l11eo6k"
                                         ></div>
                                         <div
-                                            className="h-2 rounded bg-purple-700 absolute top-0 left-0"
+                                            className="h-full rounded-full bg-gradient-to-r from-purple-600 to-purple-400 absolute top-0 left-0 group-hover:shadow-glow"
                                             style={{ width: `${playedPercent}%` }}
-                                            data-oid="ati-by4"
-                                        ></div>
+                                            data-oid="l2_uott"
+                                        >
+                                            <div
+                                                className="absolute right-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform"
+                                                data-oid="56n4ss5"
+                                            ></div>
+                                        </div>
                                     </div>
                                     <input
                                         type="range"
@@ -477,69 +626,113 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                                         onMouseDown={handleSeekStart}
                                         onTouchStart={handleSeekStart}
                                         onChange={handleSeekEnd}
-                                        className="absolute top-0 left-0 w-full h-2 opacity-0 cursor-pointer"
-                                        data-oid="_ai_zul"
+                                        className="absolute top-0 left-0 w-full h-8 opacity-0 cursor-pointer"
+                                        data-oid="wcmqs.s"
                                     />
                                 </div>
-                                <span className="text-white text-sm" data-oid="nhn1fq1">
+                                <span className="text-white text-sm font-medium" data-oid="krk:ogg">
                                     {formatTime(duration)}
                                 </span>
                             </div>
-                            <div className="flex items-center justify-between" data-oid="mddldmk">
-                                <div className="flex items-center space-x-6" data-oid="illog2s">
+
+                            {/* Control Buttons */}
+                            <div className="flex items-center justify-between" data-oid="mytl7az">
+                                <div className="flex items-center space-x-6" data-oid="a4459_b">
+                                    {/* Skip backward 10s */}
+                                    <button
+                                        onClick={() => {
+                                            if (videoRef.current) {
+                                                videoRef.current.currentTime = Math.max(
+                                                    0,
+                                                    currentTime - 10,
+                                                );
+                                            }
+                                        }}
+                                        className="text-white hover:text-purple-300 transition-colors p-2 rounded-full hover:bg-black/30"
+                                        data-oid="kpa1hcv"
+                                    >
+                                        <BackwardIcon className="size-6" data-oid="3hu4d2s" />
+                                    </button>
+
+                                    {/* Play/Pause */}
                                     <button
                                         onClick={togglePlay}
-                                        className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="isv2mpi"
+                                        className="text-white hover:text-purple-300 transition-colors p-2 rounded-full hover:bg-black/30"
+                                        data-oid="5o9daoz"
                                     >
                                         {isPlaying ? (
-                                            <PauseIcon className="size-12" data-oid="wpn6_rt" />
+                                            <PauseIcon className="size-8" data-oid="lq9-wdf" />
                                         ) : (
-                                            <PlayIcon className="size-12" data-oid="j:o-kg-" />
+                                            <PlayIcon className="size-8" data-oid="0nh32w1" />
                                         )}
                                     </button>
+
+                                    {/* Skip forward 10s */}
                                     <button
-                                        onClick={toggleMute}
-                                        className="text-white hover:text-purple-300 transition-colors"
-                                        data-oid="1zaz2pi"
+                                        onClick={() => {
+                                            if (videoRef.current) {
+                                                videoRef.current.currentTime = Math.min(
+                                                    duration,
+                                                    currentTime + 10,
+                                                );
+                                            }
+                                        }}
+                                        className="text-white hover:text-purple-300 transition-colors p-2 rounded-full hover:bg-black/30"
+                                        data-oid="nxz_b23"
                                     >
-                                        {isMuted ? (
-                                            <SpeakerXMarkIcon
-                                                className="size-12"
-                                                data-oid="82a34jh"
-                                            />
-                                        ) : (
-                                            <SpeakerWaveIcon
-                                                className="size-12"
-                                                data-oid="-9_fxjl"
-                                            />
-                                        )}
+                                        <ForwardIcon className="size-6" data-oid=".t8k84m" />
                                     </button>
-                                    <input
-                                        type="range"
-                                        min={0}
-                                        max={1}
-                                        step={0.01}
-                                        value={volume}
-                                        onChange={handleVolumeChange}
-                                        className="w-24 accent-purple-500"
-                                        data-oid="s4r07hm"
-                                    />
+
+                                    {/* Volume */}
+                                    <div
+                                        className="flex items-center space-x-2 group"
+                                        data-oid="::xuk03"
+                                    >
+                                        <button
+                                            onClick={toggleMute}
+                                            className="text-white hover:text-purple-300 transition-colors p-2 rounded-full hover:bg-black/30"
+                                            data-oid="ue-s7r9"
+                                        >
+                                            {isMuted ? (
+                                                <SpeakerXMarkIcon
+                                                    className="size-6"
+                                                    data-oid="l3sm1nw"
+                                                />
+                                            ) : (
+                                                <SpeakerWaveIcon
+                                                    className="size-6"
+                                                    data-oid="r3ljwzm"
+                                                />
+                                            )}
+                                        </button>
+                                        <input
+                                            type="range"
+                                            min={0}
+                                            max={1}
+                                            step={0.01}
+                                            value={volume}
+                                            onChange={handleVolumeChange}
+                                            className="w-0 md:w-24 opacity-0 md:opacity-100 group-hover:w-24 group-hover:opacity-100 transition-all duration-300 accent-purple-500"
+                                            data-oid="f0m0vb1"
+                                        />
+                                    </div>
                                 </div>
+
+                                {/* Fullscreen */}
                                 <button
                                     onClick={toggleFullscreen}
-                                    className="text-white hover:text-purple-300 transition-colors"
-                                    data-oid="ut32klx"
+                                    className="text-white hover:text-purple-300 transition-colors p-2 rounded-full hover:bg-black/30"
+                                    data-oid="fwk827_"
                                 >
                                     {!isFullscreen ? (
                                         <ArrowsPointingOutIcon
-                                            className="size-12"
-                                            data-oid="b73m5nr"
+                                            className="size-6"
+                                            data-oid="td0ps0v"
                                         />
                                     ) : (
                                         <ArrowsPointingInIcon
-                                            className="size-12"
-                                            data-oid="-e07740"
+                                            className="size-6"
+                                            data-oid="1oqlmp9"
                                         />
                                     )}
                                 </button>
@@ -548,35 +741,11 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                     </div>
                 </>
             ) : (
-                // Link Fetcher UI while waiting for video URL
-                <div
-                    className="p-6 bg-gray-800 text-gray-200 rounded-lg shadow-md"
-                    data-oid="7338x.v"
-                >
-                    <h2 className="text-xl font-semibold mb-4" data-oid="8536eqr">
-                        Fetching Video Link
-                    </h2>
-                    {progress ? (
-                        <div className="space-y-2" data-oid="76u_w:i">
-                            <p className="text-sm" data-oid=":pu3_qe">
-                                Status: {progress.status}
-                            </p>
-                            <p className="text-sm" data-oid="he:ng1-">
-                                Progress: {progress.progress.toFixed(2)}%
-                            </p>
-                            <p className="text-sm" data-oid="2yed-ku">
-                                Downloaded: {progress.downloaded} / {progress.total}
-                            </p>
-                        </div>
-                    ) : (
-                        <p className="text-sm" data-oid="gcko1lt">
-                            Initializing link fetching...
-                        </p>
-                    )}
-                </div>
+                // Link Fetcher UI with Ad Placeholder
+                <AdPlaceholder title={videoTitle} data-oid="g3417lm" />
             )}
 
-            <style jsx data-oid="nvrhyx-">{`
+            <style jsx data-oid="1_vgqdk">{`
                 @keyframes fade-out {
                     0% {
                         opacity: 1;
@@ -590,6 +759,10 @@ const MoviePlayer: React.FC<MoviePlayerProps> = ({
                 }
                 .animate-fade-out {
                     animation: fade-out 4s forwards;
+                }
+
+                .shadow-glow {
+                    box-shadow: 0 0 8px 2px rgba(168, 85, 247, 0.4);
                 }
             `}</style>
         </div>

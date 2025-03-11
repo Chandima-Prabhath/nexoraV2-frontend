@@ -12,46 +12,46 @@ export const Navbar = () => {
     return (
         <nav
             className="fixed w-full z-20 bg-gradient-to-b from-gray-900 to-transparent backdrop-blur-lg"
-            data-oid="bohq5il"
+            data-oid="leq-rzq"
         >
-            <div className="container mx-auto px-6 py-4" data-oid="6hoih-7">
-                <div className="flex items-center justify-between" data-oid="ztt_86x">
+            <div className="container mx-auto px-6 py-4" data-oid="26a0lep">
+                <div className="flex items-center justify-between" data-oid="ml-wujf">
                     <Link
                         href={'/'}
                         className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent"
-                        data-oid="_8a770q"
+                        data-oid="m23ll3z"
                     >
                         NEXORA
                     </Link>
-                    <DesktopMenu data-oid="3f-2fpi" />
-                    <div className="flex gap-4" data-oid="9qm6p8h">
-                        <button className="text-white" data-oid="-k9ytg.">
-                            <Link href={'/search'} data-oid="bpfai3i">
-                                <MagnifyingGlassIcon className="size-6" data-oid="e:hg56q" />
+                    <DesktopMenu data-oid="1e019lt" />
+                    <div className="flex gap-4" data-oid="tz8pd53">
+                        <button className="text-white" data-oid="5fhys6:">
+                            <Link href={'/search'} data-oid="sw:4s1c">
+                                <MagnifyingGlassIcon className="size-6" data-oid="dh2ec8v" />
                             </Link>
                         </button>
                         <button
                             className="md:hidden text-white"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            data-oid="3wtq6.d"
+                            data-oid="qnwukmq"
                         >
                             {isMobileMenuOpen ? (
-                                <XMarkIcon className="size-6" data-oid="la3rflc" />
+                                <XMarkIcon className="size-6" data-oid="xsgi0ro" />
                             ) : (
-                                <Bars3Icon className="size-6" data-oid="mlayy07" />
+                                <Bars3Icon className="size-6" data-oid="oq61dzi" />
                             )}
                         </button>
 
                         <button
                             className="hidden md:block bg-gradient-to-r from-violet-600 to-purple-500 hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-400 px-6 py-2 rounded-full"
-                            data-oid=".uvnxj2"
+                            data-oid="a2duhms"
                         >
                             Sign In
                         </button>
                     </div>
                 </div>
             </div>
-            <MobileMenu isOpen={isMobileMenuOpen} data-oid="_661on9" />
+            <MobileMenu isOpen={isMobileMenuOpen} data-oid="-i_bfrj" />
         </nav>
     );
 };

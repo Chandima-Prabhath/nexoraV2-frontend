@@ -54,12 +54,12 @@ function TvShowsContent() {
     };
 
     return (
-        <div className="portrait:p-2 p-4" data-oid="1p5be7j">
+        <div className="portrait:p-2 p-4" data-oid="09.2ybf">
             {loading ? (
-                <div className="flex items-center justify-center min-h-[60vh]" data-oid="nl22l95">
+                <div className="flex items-center justify-center min-h-[60vh]" data-oid="t_jpmt1">
                     <div
                         className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                        data-oid="tj2f3ji"
+                        data-oid=":xzh3q6"
                     ></div>
                 </div>
             ) : (
@@ -68,18 +68,18 @@ function TvShowsContent() {
                     <div
                         key={currentPage}
                         className="flex flex-wrap justify-center items-center portrait:gap-2 gap-10"
-                        data-oid="ssuo57b"
+                        data-oid="t:r.ca_"
                     >
                         {tvshows.map((show, index) => (
                             <div
                                 key={`${show.title}-${index}`}
                                 className="transform transition-transform duration-300 hover:scale-105 w-[fit-content]"
-                                data-oid="-l4yiwk"
+                                data-oid="tv1r04x"
                             >
                                 <TvShowCard
                                     title={show.title}
                                     episodesCount={show.episodeCount}
-                                    data-oid="s5:2u6g"
+                                    data-oid="548h_wu"
                                 />
                             </div>
                         ))}
@@ -88,28 +88,28 @@ function TvShowsContent() {
                     {/* Pagination */}
                     <div
                         className="mt-12 flex flex-row items-center justify-center gap-2"
-                        data-oid="k5ly-77"
+                        data-oid="bjp-chb"
                     >
-                        <div className="flex items-center gap-2" data-oid="f74luhk">
+                        <div className="flex items-center gap-2" data-oid="xr.ttb0">
                             <button
                                 onClick={() => handlePageChange(1)}
                                 disabled={currentPage <= 1}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="opl-pvq"
+                                data-oid="ljt7tzz"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="up_wzhm"
+                                    data-oid="a9vh2ut"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
-                                        data-oid="5uk9lb1"
+                                        data-oid="bxxhdmw"
                                     />
                                 </svg>
                             </button>
@@ -117,55 +117,55 @@ function TvShowsContent() {
                                 onClick={() => handlePageChange(currentPage - 1)}
                                 disabled={currentPage <= 1}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="ccaml_8"
+                                data-oid="ktg382l"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="zf15qqy"
+                                    data-oid="s.v6u3t"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M15 19l-7-7 7-7"
-                                        data-oid="ugkfgxl"
+                                        data-oid="kpzjr3c"
                                     />
                                 </svg>
                             </button>
                         </div>
 
-                        <div className="flex items-center gap-2" data-oid="3bf84t-">
+                        <div className="flex items-center gap-2" data-oid=".uxqscd">
                             <span
                                 className="px-4 py-2 rounded-lg bg-gray-800 text-white font-medium"
-                                data-oid="kfidk23"
+                                data-oid="1nwwbr0"
                             >
                                 Page {currentPage} of {totalPages}
                             </span>
                         </div>
 
-                        <div className="flex items-center gap-2" data-oid="jpf1n9v">
+                        <div className="flex items-center gap-2" data-oid="f567:x5">
                             <button
                                 onClick={() => handlePageChange(currentPage + 1)}
                                 disabled={currentPage >= totalPages}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="cp3bv8g"
+                                data-oid=":2k6hj8"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="4rs_t.:"
+                                    data-oid="1nacg4l"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M9 5l7 7-7 7"
-                                        data-oid="z1qk.64"
+                                        data-oid="lz.ufci"
                                     />
                                 </svg>
                             </button>
@@ -173,21 +173,21 @@ function TvShowsContent() {
                                 onClick={() => handlePageChange(totalPages)}
                                 disabled={currentPage >= totalPages}
                                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white disabled:opacity-50 disabled:hover:bg-gray-800 disabled:hover:text-gray-400 transition-colors"
-                                data-oid="zr8lutq"
+                                data-oid="dogid24"
                             >
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    data-oid="82h8got"
+                                    data-oid="x.z95jd"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                                        data-oid=".kny7b4"
+                                        data-oid="95j704v"
                                     />
                                 </svg>
                             </button>
@@ -203,21 +203,21 @@ export default function TvShowsPage() {
     const [filterActive, setFilterActive] = useState(false);
 
     return (
-        <div className="page min-h-screen pt-20 pb-4" data-oid="r6fjd7e">
-            <div className="container mx-auto portrait:px-3 px-4" data-oid="y0k1hjq">
+        <div className="page min-h-screen pt-20 pb-4" data-oid="a09u7ed">
+            <div className="container mx-auto portrait:px-3 px-4" data-oid="i1t5y7.">
                 {/* Header Section */}
-                <div className="mb-8 space-y-2" data-oid="0kseww5">
-                    <h2 className="text-4xl font-bold text-white" data-oid="nw0cynl">
+                <div className="mb-8 space-y-2" data-oid="81gyiv-">
+                    <h2 className="text-4xl font-bold text-white" data-oid="tfyrxwe">
                         TV Shows
                     </h2>
-                    <p className="text-gray-400 max-w-3xl" data-oid="36y2l3v">
+                    <p className="text-gray-400 max-w-3xl" data-oid="nlzmy43">
                         Explore our collection of TV series from various genres. From drama to
                         comedy, find your next binge-worthy show here.
                     </p>
                     <GenresFilter
                         mediaType="series"
                         onFilterChange={setFilterActive}
-                        data-oid="1zsl3y9"
+                        data-oid="zrcr8o3"
                     />
                 </div>
 
@@ -225,23 +225,23 @@ export default function TvShowsPage() {
                 {!filterActive && (
                     <div
                         className="bg-gray-800/30 rounded-3xl backdrop-blur-sm border border-gray-700/50"
-                        data-oid="j50jzou"
+                        data-oid="_7abbj1"
                     >
                         <Suspense
                             fallback={
                                 <div
                                     className="flex items-center justify-center min-h-[50vh]"
-                                    data-oid="5rlyox2"
+                                    data-oid=".flwxm7"
                                 >
                                     <div
                                         className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                        data-oid="h7pmy:e"
+                                        data-oid="q983.5."
                                     ></div>
                                 </div>
                             }
-                            data-oid="2e949gq"
+                            data-oid="_x8_92:"
                         >
-                            <TvShowsContent data-oid="z4m90ox" />
+                            <TvShowsContent data-oid="0x0su0s" />
                         </Suspense>
                     </div>
                 )}
